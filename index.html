@@ -1,177 +1,1284 @@
+
 <!DOCTYPE html>
-
+<html class="projects-show" lang="en">
 <head>
-<link href='https://fonts.googleapis.com/css?family=Poller+One' rel='stylesheet' type='text/css'>
-<script src="/assets/jquery.js"></script>
-<style>
-
-.robot {
-  position: relative;
-  left: 200px;
-}
-
-.beep {
-  width: 5px;
-  height: 0;
-  border: 5px solid transparent;
-  border-top: 10px solid #777;
-  border-bottom: 80px solid #888;
-  position: relative;
-  left: 140px;
-}
-
-@keyframes blink {
-  50% {
-    background: radial-gradient(circle, red 15%, transparent 40%), #cc5;
-    background-size: 75px 150px;
-  }
-}
-@-webkit-keyframes blink {
-  50% {
-    background: -webkit-radial-gradient(circle, red 15%, transparent 40%), #cc5;
-    background-size: 75px 150px;
-  }
-}
-@-moz-keyframes blink {
-  50% {
-    background: -moz-radial-gradient(circle, red 15%, transparent 40%), #cc5;
-    background-size: 75px 150px;
-  }
-}
-.laser {
-  animation: blink .5s infinite;
-  -webkit-animation: blink .5s infinite;
-  -moz-animation: blink .5s infinite;
-}
-.brain {
-  background: radial-gradient(circle, white 15%, transparent 40%), #cc5;
-  background: -moz-radial-gradient(circle, white 15%, transparent 40%), #cc5; 
-  background: -webkit-radial-gradient(circle, white 15%, transparent 40%), #cc5;
-  background-size: 75px 150px;
-  height: 150px;
-  width: 150px;
-  border-radius: 60px 60px 10px 10px;
-  border-bottom: 40px solid #666;
-  position: relative;
-  left: 70px;
-}
-.torso {
-  height: 0;
-  width: 140px;
-  border-top: 300px solid #bc6;
-  border-left: 75px solid transparent;
-  border-right: 75px solid transparent;
-  border-radius: 20px 20px 100px 100px;
-}
-.left {
-  font-family: 'Poller One', verdana, arial, sans-serif;
-  font-weight: bold;
-  font-size: 250px;
-  color: #666;
-  transform: rotate(200deg);
-  -webkit-transform: rotate(200deg);
-  -moz-transform: rotate(200deg);
-  position: relative;
-  top: -320px;
-  left: -190px;
-  z-index: -1;
-}
-.right {
-  font-family: 'Poller One', verdana, arial, sans-serif;
-  font-weight: bold;
-  font-size: 250px;
-  color: #666;
-  transform: scaleY(-1) rotate(20deg);
-  -webkit-transform: scaleY(-1) rotate(20deg);
-  -moz-transform: scaleY(-1) rotate(20deg);
-  position: relative;
-  top: -620px;
-  left: 190px;
-  z-index: -1;
-}
-.foot {
-  height: 40px;
-  width: 40px;
-  background: #ccc;
-  border-radius: 40px;
-  border: 15px solid #999;
-  position: relative;
-  left: 110px;
-  top: -10px;
-  z-index: -1;
-}
-
-@keyframes dance {
-  from {
-    left: 800px;  
-  }  
-}
-@-webkit-keyframes dance {
-  from {
-    left: 800px;  
-  }  
-}
-@-moz-keyframes dance {
-  from {
-    left: 800px;  
-  }  
-}
-
-img {
-  animation: dance 4s infinite;
-  -webkit-animation: dance 4s infinite;
-  -moz-animation: dance 4s infinite;
-  position: absolute;
-  top: 200px;
-  left: 400px;
-}
-</style>
-</head>
-
-<body>
-
-<div class="robot">
-  <div class="beep"></div>
-  <div class="brain"></div>
-  <div class="torso">
-    <div class="left">j</div>
-    <div class="right">j</div>
-  </div>
-  <div class="foot"></div>
-</div>
-
-<button class="flash">laser eyes on/off</button>
-<button class="color">change color!</button>
-<button class="moves">break/dance</button>
-
-<img src="/assets/dance_cotter.gif">
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam-cell.nr-data.net","errorBeacon":"bam-cell.nr-data.net","licenseKey":"44a7295480","applicationID":"66535583","transactionName":"dg1aRxMMCghUEBlJQVoIUVAVEEkXWQ1B","queueTime":3,"applicationTime":231,"agent":""}</script>
+<script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"VQAPVFJWCRAGUlRRAgQPVQ==",licenseKey:"44a7295480",applicationID:"66535583"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(t){try{c.console&&console.log(t)}catch(e){}}var i,o=t("ee"),a=t(23),c={};try{i=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(c.console=!0,i.indexOf("dev")!==-1&&(c.dev=!0),i.indexOf("nr_dev")!==-1&&(c.nrDev=!0))}catch(s){}c.nrDev&&o.on("internal-error",function(t){r(t.stack)}),c.dev&&o.on("fn-err",function(t,e,n){r(n.stack)}),c.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(c,function(t,e){return t}).join(", ")))},{}],2:[function(t,e,n){function r(t,e,n,r,c){try{p?p-=1:i(c||new UncaughtException(t,e,n),!0)}catch(f){try{o("ierr",[f,s.now(),!0])}catch(d){}}return"function"==typeof u&&u.apply(this,a(arguments))}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function i(t,e){var n=e?null:s.now();o("err",[t,n])}var o=t("handle"),a=t(24),c=t("ee"),s=t("loader"),f=t("gos"),u=window.onerror,d=!1,l="nr@seenError",p=0;s.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(h){"stack"in h&&(t(9),t(8),"addEventListener"in window&&t(5),s.xhrWrappable&&t(10),d=!0)}c.on("fn-start",function(t,e,n){d&&(p+=1)}),c.on("fn-err",function(t,e,n){d&&!n[l]&&(f(n,l,function(){return!0}),this.thrown=!0,i(n))}),c.on("fn-end",function(){d&&!this.thrown&&p>0&&(p-=1)}),c.on("internal-error",function(t){o("ierr",[t,s.now(),!0])})},{}],3:[function(t,e,n){t("loader").features.ins=!0},{}],4:[function(t,e,n){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var i=t("ee"),o=t("handle"),a=t(9),c=t(8),s="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",l="resource",p="-start",h="-end",m="fn"+p,w="fn"+h,v="bstTimer",g="pushState",y=t("loader");y.features.stn=!0,t(7),"addEventListener"in window&&t(5);var x=NREUM.o.EV;i.on(m,function(t,e){var n=t[0];n instanceof x&&(this.bstStart=y.now())}),i.on(w,function(t,e){var n=t[0];n instanceof x&&o("bst",[n,e,this.bstStart,y.now()])}),a.on(m,function(t,e,n){this.bstStart=y.now(),this.bstType=n}),a.on(w,function(t,e){o(v,[e,this.bstStart,y.now(),this.bstType])}),c.on(m,function(){this.bstStart=y.now()}),c.on(w,function(t,e){o(v,[e,this.bstStart,y.now(),"requestAnimationFrame"])}),i.on(g+p,function(t){this.time=y.now(),this.startPath=location.pathname+location.hash}),i.on(g+h,function(t){o("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+s]?window.performance[f](u,function(t){o(d,[window.performance.getEntriesByType(l)]),window.performance["c"+s]()},!1):window.performance[f]("webkit"+u,function(t){o(d,[window.performance.getEntriesByType(l)]),window.performance["webkitC"+s]()},!1)),document[f]("scroll",r,{passive:!0}),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],5:[function(t,e,n){function r(t){for(var e=t;e&&!e.hasOwnProperty(u);)e=Object.getPrototypeOf(e);e&&i(e)}function i(t){c.inPlace(t,[u,d],"-",o)}function o(t,e){return t[1]}var a=t("ee").get("events"),c=t("wrap-function")(a,!0),s=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";e.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(i(window),i(f.prototype)),a.on(u+"-start",function(t,e){var n=t[1],r=s(n,"nr@wrapped",function(){function t(){if("function"==typeof n.handleEvent)return n.handleEvent.apply(n,arguments)}var e={object:t,"function":n}[typeof n];return e?c(e,"fn-",null,e.name||"anonymous"):n});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],6:[function(t,e,n){function r(t,e,n){var r=t[e];"function"==typeof r&&(t[e]=function(){var t=o(arguments),e={};i.emit(n+"before-start",[t],e);var a;e[m]&&e[m].dt&&(a=e[m].dt);var c=r.apply(this,t);return i.emit(n+"start",[t,a],c),c.then(function(t){return i.emit(n+"end",[null,t],c),t},function(t){throw i.emit(n+"end",[t],c),t})})}var i=t("ee").get("fetch"),o=t(24),a=t(23);e.exports=i;var c=window,s="fetch-",f=s+"body-",u=["arrayBuffer","blob","json","text","formData"],d=c.Request,l=c.Response,p=c.fetch,h="prototype",m="nr@context";d&&l&&p&&(a(u,function(t,e){r(d[h],e,f),r(l[h],e,f)}),r(c,"fetch",s),i.on(s+"end",function(t,e){var n=this;if(e){var r=e.headers.get("content-length");null!==r&&(n.rxSize=r),i.emit(s+"done",[null,e],n)}else i.emit(s+"done",[t],n)}))},{}],7:[function(t,e,n){var r=t("ee").get("history"),i=t("wrap-function")(r);e.exports=r;var o=window.history&&window.history.constructor&&window.history.constructor.prototype,a=window.history;o&&o.pushState&&o.replaceState&&(a=o),i.inPlace(a,["pushState","replaceState"],"-")},{}],8:[function(t,e,n){var r=t("ee").get("raf"),i=t("wrap-function")(r),o="equestAnimationFrame";e.exports=r,i.inPlace(window,["r"+o,"mozR"+o,"webkitR"+o,"msR"+o],"raf-"),r.on("raf-start",function(t){t[0]=i(t[0],"fn-")})},{}],9:[function(t,e,n){function r(t,e,n){t[0]=a(t[0],"fn-",null,n)}function i(t,e,n){this.method=n,this.timerDuration=isNaN(t[1])?0:+t[1],t[0]=a(t[0],"fn-",this,n)}var o=t("ee").get("timer"),a=t("wrap-function")(o),c="setTimeout",s="setInterval",f="clearTimeout",u="-start",d="-";e.exports=o,a.inPlace(window,[c,"setImmediate"],c+d),a.inPlace(window,[s],s+d),a.inPlace(window,[f,"clearImmediate"],f+d),o.on(s+u,r),o.on(c+u,i)},{}],10:[function(t,e,n){function r(t,e){d.inPlace(e,["onreadystatechange"],"fn-",c)}function i(){var t=this,e=u.context(t);t.readyState>3&&!e.resolved&&(e.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,g,"fn-",c)}function o(t){y.push(t),h&&(b?b.then(a):w?w(a):(E=-E,R.data=E))}function a(){for(var t=0;t<y.length;t++)r([],y[t]);y.length&&(y=[])}function c(t,e){return e}function s(t,e){for(var n in t)e[n]=t[n];return e}t(5);var f=t("ee"),u=f.get("xhr"),d=t("wrap-function")(u),l=NREUM.o,p=l.XHR,h=l.MO,m=l.PR,w=l.SI,v="readystatechange",g=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],y=[];e.exports=u;var x=window.XMLHttpRequest=function(t){var e=new p(t);try{u.emit("new-xhr",[e],e),e.addEventListener(v,i,!1)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}return e};if(s(p,x),x.prototype=p.prototype,d.inPlace(x.prototype,["open","send"],"-xhr-",c),u.on("send-xhr-start",function(t,e){r(t,e),o(e)}),u.on("open-xhr-start",r),h){var b=m&&m.resolve();if(!w&&!m){var E=1,R=document.createTextNode(E);new h(a).observe(R,{characterData:!0})}}else f.on("fn-end",function(t){t[0]&&t[0].type===v||a()})},{}],11:[function(t,e,n){function r(t){if(!c(t))return null;var e=window.NREUM;if(!e.loader_config)return null;var n=(e.loader_config.accountID||"").toString()||null,r=(e.loader_config.agentID||"").toString()||null,f=(e.loader_config.trustKey||"").toString()||null;if(!n||!r)return null;var h=p.generateSpanId(),m=p.generateTraceId(),w=Date.now(),v={spanId:h,traceId:m,timestamp:w};return(t.sameOrigin||s(t)&&l())&&(v.traceContextParentHeader=i(h,m),v.traceContextStateHeader=o(h,w,n,r,f)),(t.sameOrigin&&!u()||!t.sameOrigin&&s(t)&&d())&&(v.newrelicHeader=a(h,m,w,n,r,f)),v}function i(t,e){return"00-"+e+"-"+t+"-01"}function o(t,e,n,r,i){var o=0,a="",c=1,s="",f="";return i+"@nr="+o+"-"+c+"-"+n+"-"+r+"-"+t+"-"+a+"-"+s+"-"+f+"-"+e}function a(t,e,n,r,i,o){var a="btoa"in window&&"function"==typeof window.btoa;if(!a)return null;var c={v:[0,1],d:{ty:"Browser",ac:r,ap:i,id:t,tr:e,ti:n}};return o&&r!==o&&(c.d.tk=o),btoa(JSON.stringify(c))}function c(t){return f()&&s(t)}function s(t){var e=!1,n={};if("init"in NREUM&&"distributed_tracing"in NREUM.init&&(n=NREUM.init.distributed_tracing),t.sameOrigin)e=!0;else if(n.allowed_origins instanceof Array)for(var r=0;r<n.allowed_origins.length;r++){var i=h(n.allowed_origins[r]);if(t.hostname===i.hostname&&t.protocol===i.protocol&&t.port===i.port){e=!0;break}}return e}function f(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.enabled}function u(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.exclude_newrelic_header}function d(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&NREUM.init.distributed_tracing.cors_use_newrelic_header!==!1}function l(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.cors_use_tracecontext_headers}var p=t(20),h=t(13);e.exports={generateTracePayload:r,shouldGenerateTrace:c}},{}],12:[function(t,e,n){function r(t){var e=this.params,n=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<l;r++)t.removeEventListener(d[r],this.listener,!1);e.aborted||(n.duration=a.now()-this.startTime,this.loadCaptureCalled||4!==t.readyState?null==e.status&&(e.status=0):o(this,t),n.cbTime=this.cbTime,u.emit("xhr-done",[t],t),c("xhr",[e,n,this.startTime]))}}function i(t,e){var n=s(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.parsedOrigin=s(e),t.sameOrigin=t.parsedOrigin.sameOrigin}function o(t,e){t.params.status=e.status;var n=w(e,t.lastSize);if(n&&(t.metrics.rxSize=n),t.sameOrigin){var r=e.getResponseHeader("X-NewRelic-App-Data");r&&(t.params.cat=r.split(", ").pop())}t.loadCaptureCalled=!0}var a=t("loader");if(a.xhrWrappable){var c=t("handle"),s=t(13),f=t(11).generateTracePayload,u=t("ee"),d=["load","error","abort","timeout"],l=d.length,p=t("id"),h=t(17),m=t(16),w=t(14),v=window.XMLHttpRequest;a.features.xhr=!0,t(10),t(6),u.on("new-xhr",function(t){var e=this;e.totalCbs=0,e.called=0,e.cbTime=0,e.end=r,e.ended=!1,e.xhrGuids={},e.lastSize=null,e.loadCaptureCalled=!1,t.addEventListener("load",function(n){o(e,t)},!1),h&&(h>34||h<10)||window.opera||t.addEventListener("progress",function(t){e.lastSize=t.loaded},!1)}),u.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),u.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid);var n=f(this.parsedOrigin);if(n){var r=!1;n.newrelicHeader&&(e.setRequestHeader("newrelic",n.newrelicHeader),r=!0),n.traceContextParentHeader&&(e.setRequestHeader("traceparent",n.traceContextParentHeader),n.traceContextStateHeader&&e.setRequestHeader("tracestate",n.traceContextStateHeader),r=!0),r&&(this.dt=n)}}),u.on("send-xhr-start",function(t,e){var n=this.metrics,r=t[0],i=this;if(n&&r){var o=m(r);o&&(n.txSize=o)}this.startTime=a.now(),this.listener=function(t){try{"abort"!==t.type||i.loadCaptureCalled||(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&&(i.onloadCalled||"function"!=typeof e.onload))&&i.end(e)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}};for(var c=0;c<l;c++)e.addEventListener(d[c],this.listener,!1)}),u.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),u.on("xhr-load-added",function(t,e){var n=""+p(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),u.on("xhr-load-removed",function(t,e){var n=""+p(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),u.on("addEventListener-end",function(t,e){e instanceof v&&"load"===t[0]&&u.emit("xhr-load-added",[t[1],t[2]],e)}),u.on("removeEventListener-end",function(t,e){e instanceof v&&"load"===t[0]&&u.emit("xhr-load-removed",[t[1],t[2]],e)}),u.on("fn-start",function(t,e,n){e instanceof v&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=a.now()))}),u.on("fn-end",function(t,e){this.xhrCbStart&&u.emit("xhr-cb-time",[a.now()-this.xhrCbStart,this.onload,e],e)}),u.on("fetch-before-start",function(t){function e(t,e){var n=!1;return e.newrelicHeader&&(t.set("newrelic",e.newrelicHeader),n=!0),e.traceContextParentHeader&&(t.set("traceparent",e.traceContextParentHeader),e.traceContextStateHeader&&t.set("tracestate",e.traceContextStateHeader),n=!0),n}var n,r=t[1]||{};"string"==typeof t[0]?n=t[0]:t[0]&&t[0].url?n=t[0].url:window.URL&&t[0]&&t[0]instanceof URL&&(n=t[0].href),n&&(this.parsedOrigin=s(n),this.sameOrigin=this.parsedOrigin.sameOrigin);var i=f(this.parsedOrigin);if(i&&(i.newrelicHeader||i.traceContextParentHeader))if("string"==typeof t[0]||window.URL&&t[0]&&t[0]instanceof URL){var o={};for(var a in r)o[a]=r[a];o.headers=new Headers(r.headers||{}),e(o.headers,i)&&(this.dt=i),t.length>1?t[1]=o:t.push(o)}else t[0]&&t[0].headers&&e(t[0].headers,i)&&(this.dt=i)})}},{}],13:[function(t,e,n){var r={};e.exports=function(t){if(t in r)return r[t];var e=document.createElement("a"),n=window.location,i={};e.href=t,i.port=e.port;var o=e.href.split("://");!i.port&&o[1]&&(i.port=o[1].split("/")[0].split("@").pop().split(":")[1]),i.port&&"0"!==i.port||(i.port="https"===o[0]?"443":"80"),i.hostname=e.hostname||n.hostname,i.pathname=e.pathname,i.protocol=o[0],"/"!==i.pathname.charAt(0)&&(i.pathname="/"+i.pathname);var a=!e.protocol||":"===e.protocol||e.protocol===n.protocol,c=e.hostname===document.domain&&e.port===n.port;return i.sameOrigin=a&&(!e.hostname||c),"/"===i.pathname&&(r[t]=i),i}},{}],14:[function(t,e,n){function r(t,e){var n=t.responseType;return"json"===n&&null!==e?e:"arraybuffer"===n||"blob"===n||"json"===n?i(t.response):"text"===n||""===n||void 0===n?i(t.responseText):void 0}var i=t(16);e.exports=r},{}],15:[function(t,e,n){function r(){}function i(t,e,n){return function(){return o(t,[f.now()].concat(c(arguments)),e?null:this,n),e?void 0:this}}var o=t("handle"),a=t(23),c=t(24),s=t("ee").get("tracer"),f=t("loader"),u=NREUM;"undefined"==typeof window.newrelic&&(newrelic=u);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(d,function(t,e){u[e]=i(l+e,!0,"api")}),u.addPageAction=i(l+"addPageAction",!0),u.setCurrentRouteName=i(l+"routeName",!0),e.exports=newrelic,u.interaction=function(){return(new r).get()};var h=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(p+"tracer",[f.now(),t,n],r),function(){if(s.emit((i?"":"no-")+"fn-start",[f.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw s.emit("fn-err",[arguments,this,t],n),t}finally{s.emit("fn-end",[f.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){h[e]=i(p+e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),o("err",[t,f.now(),!1,e])}},{}],16:[function(t,e,n){e.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(e){return}}}},{}],17:[function(t,e,n){var r=0,i=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);i&&(r=+i[1]),e.exports=r},{}],18:[function(t,e,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=t(25);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],19:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?d("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&d("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();n.length>0&&d("lcp",[n[n.length-1]])}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||d("cls",[t])})}function a(t){if(t instanceof h&&!w){var e=Math.round(t.timeStamp),n={type:t.type};e<=l.now()?n.fid=l.now()-e:e>l.offset&&e<=Date.now()?(e-=l.offset,n.fid=l.now()-e):e=l.now(),w=!0,d("timing",["fi",e,n])}}function c(t){d("pageHide",[l.now(),t])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var s,f,u,d=t("handle"),l=t("loader"),p=t(22),h=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){s=new PerformanceObserver(r);try{s.observe({entryTypes:["paint"]})}catch(m){}f=new PerformanceObserver(i);try{f.observe({entryTypes:["largest-contentful-paint"]})}catch(m){}u=new PerformanceObserver(o);try{u.observe({type:"layout-shift",buffered:!0})}catch(m){}}if("addEventListener"in document){var w=!1,v=["click","keydown","mousedown","pointerdown","touchstart"];v.forEach(function(t){document.addEventListener(t,a,!1)})}p(c)}},{}],20:[function(t,e,n){function r(){function t(){return e?15&e[n++]:16*Math.random()|0}var e=null,n=0,r=window.crypto||window.msCrypto;r&&r.getRandomValues&&(e=r.getRandomValues(new Uint8Array(31)));for(var i,o="xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx",a="",c=0;c<o.length;c++)i=o[c],"x"===i?a+=t().toString(16):"y"===i?(i=3&t()|8,a+=i.toString(16)):a+=i;return a}function i(){return a(16)}function o(){return a(32)}function a(t){function e(){return n?15&n[r++]:16*Math.random()|0}var n=null,r=0,i=window.crypto||window.msCrypto;i&&i.getRandomValues&&Uint8Array&&(n=i.getRandomValues(new Uint8Array(31)));for(var o=[],a=0;a<t;a++)o.push(e().toString(16));return o.join("")}e.exports={generateUuid:r,generateSpanId:i,generateTraceId:o}},{}],21:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,s=c.match(a);s&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=s[1])}e.exports={agent:i,version:o,match:r}},{}],22:[function(t,e,n){function r(t){function e(){t(a&&document[a]?document[a]:document[i]?"hidden":"visible")}"addEventListener"in document&&o&&document.addEventListener(o,e,!1)}e.exports=r;var i,o,a;"undefined"!=typeof document.hidden?(i="hidden",o="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",o="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",o="webkitvisibilitychange",a="webkitVisibilityState")},{}],23:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],24:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],25:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?f(t,s,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!p.aborted||o){t&&a&&t(n,r,i);for(var c=e(i),s=m(n),f=s.length,u=0;u<f;u++)s[u].apply(c,r);var l=d[y[n]];return l&&l.push([x,n,r,c]),c}}function o(t,e){g[t]=m(t).concat(e)}function h(t,e){var n=g[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return g[t]||[]}function w(t){return l[t]=l[t]||i(n)}function v(t,e){u(t,function(t,n){e=e||"feature",y[n]=e,e in d||(d[e]=[])})}var g={},y={},x={on:o,addEventListener:o,removeEventListener:h,emit:n,get:w,listeners:m,context:e,buffer:v,abort:c,aborted:!1};return x}function o(t){return f(t,s,a)}function a(){return new r}function c(){(d.api||d.feature)&&(p.aborted=!0,d=p.backlog={})}var s="nr@context",f=t("gos"),u=t(23),d={},l={},p=e.exports=i();e.exports.getOrSetContext=o,p.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!b++){var t=x.info=NREUM.info,e=l.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return f.abort();s(g,function(e,n){t[e]||(t[e]=n)});var n=a();c("mark",["onload",n+x.offset],null,"api"),c("timing",["load",n]);var r=l.createElement("script");r.src="https://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===l.readyState&&o()}function o(){c("mark",["domContent",a()+x.offset],null,"api")}var a=t(18),c=t("handle"),s=t(23),f=t("ee"),u=t(21),d=window,l=d.document,p="addEventListener",h="attachEvent",m=d.XMLHttpRequest,w=m&&m.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:m,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var v=""+location,g={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1194.min.js"},y=m&&w&&w[p]&&!/CriOS/.test(navigator.userAgent),x=e.exports={offset:a.getLastTimestamp(),now:a,origin:v,features:{},xhrWrappable:y,userAgent:u};t(15),t(19),l[p]?(l[p]("DOMContentLoaded",o,!1),d[p]("load",r,!1)):(l[h]("onreadystatechange",i),d[h]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var b=0},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,s,f){function nrWrapper(){var o,a,u,l;try{a=this,o=d(arguments),u="function"==typeof r?r(o,a):r||{}}catch(p){i([p,"",[o,a,s],u],t)}c(n+"start",[o,a,s],u,f);try{return l=e.apply(a,o)}catch(h){throw c(n+"err",[o,a,h],u,f),h}finally{c(n+"end",[o,a,l],u,f)}}return a(e)?e:(n||(n=""),nrWrapper[l]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var c,s,f,u="-"===r.charAt(0);for(f=0;f<e.length;f++)s=e[f],c=t[s],a(c)||(t[s]=n(c,u?s+r:r,i,s,o))}function c(n,r,o,a){if(!h||e){var c=h;h=!0;try{t.emit(n,r,o,e,a)}catch(s){i([s,n,r,o],t)}h=c}}return t||(t=u),n.inPlace=r,n.flag=l,n}function i(t,e){e||(e=u);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)p.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[l])}function c(t,e){var n=e(t);return n[l]=t,o(t,n,u),n}function s(t,e,n){var r=t[e];t[e]=c(r,n)}function f(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var u=t("ee"),d=t(24),l="nr@original",p=Object.prototype.hasOwnProperty,h=!1;e.exports=r,e.exports.wrapFunction=c,e.exports.wrapInPlace=s,e.exports.argsToArray=f},{}]},{},["loader",2,12,4,3]);</script>
+  <title>Learn to code HTML, CSS, and JavaScript with Dash</title>
+  <meta name="description" content="Dash is a fun and free online course from General Assembly that teaches you how to program with the basics of web development through projects you can do right in your browser. Get started today!">
+  <script src="https://cdn.optimizely.com/js/392850087.js"></script>
+    <link rel="stylesheet" media="screen" href="//ga-dash.s3.amazonaws.com/production/assets/application-7648fc4a3b2dbce6cf1c1f6395dc8f0ace9693dc275fddc3e1bfac20cf711746.css" />
+  <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="fjBgMDjT8gQkEuLhOLAdxJgwb2KUJ5AxX8OGbS9xWR0VUyBbtu6MAIkhEdVjPHFFOXs2BUKOYKW8UgfSmZDRrg==" />
+  <script src="https://ga-static-assets-s3.global.ssl.fastly.net/ga-snowplow/current/ga-snowplow.min.js"></script>
 
 <script>
-// When eyes button is clicked, toggle laser class on brain
-$(".flash").click(function() {
-  $(".brain").toggleClass('laser');
-});
+  var gaSnowplowJs = new window.GASnowplowJS({
+    appId: "dash_client_v1_production",
+    debug: false,
+    visitorCookieName: "_general_assembly_visitor_id",
+    userCookieName: "sso_provider_session_production",
+    spCollector: "sp.generalassemb.ly",
+  })
 
-// When color button is clicked...
-$(".color").click(function() {
-  // assign each named color a random number 0-255
-  var red = Math.floor(Math.random() * 255);
-  var green = Math.floor(Math.random() * 255);
-  var blue = Math.floor(Math.random() * 255);
-
-// Generate on RGBA value from red, green, and blue
-  var randomRGBA = 'rgba('+red+','+green+','+blue+',1)';
-
-// and change the body's background to our random color
-  $("body").css("background", randomRGBA);
-  //Display the three values in an alert window
-  //alert(randomRGBA);
-});
-  
-// toggle the dance moves of Cotter
-  $(".moves").click(function() {
-   $("img").toggle(); 
-  });
-  
+  gaSnowplowJs.init();
 </script>
+
+    <script src="https://cdn.cookielaw.org/consent/4f740341-5e77-436b-9272-34eefbc7a4e4.js"></script>
+  <script>    
+    function OptanonWrapper() { }
+  </script>
+
+    <script src="https://ak.sail-horizon.com/spm/spm.v1.min.js"></script>
+  <script>
+    Sailthru.init({ customerId: "d617256082f7c492f37283fe0f25c6e8" })
+  </script>
+
+  <script src="//js.honeybadger.io/v0.4/honeybadger.min.js" type="text/javascript" data-api_key="f16da1ab" data-environment="production"></script>
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+</head>
+<body>
+  <!-- Flash notices -->
+
+  <div id="show-project">
+
+<!-- Things that need to be on top -->
+<div id="skill-alert-container">
+  <div id="new-skill-alert" class="skill"></div>
+</div>
+
+<!-- Smart hint -->
+<div class="smart-hint-container"></div>
+
+<!-- Skill Pop up -->
+<div class='skill-details'>
+  <div class="skill-details-arrow"></div>
+  <div class="skill-details-content"></div>
+</div>
+
+<!-- Mobile toggle -->
+<div class="mobile-toggle">
+  <div class="mobile-toggle-switch"></div>
+  <div class="mobile-toggle-icon"></div>
+</div>
+
+<!-- Preview (on right) -->
+<div class="preview-container">
+  <iframe id="preview"></iframe>
+</div>
+
+ <!-- Workspace (on left) -->
+<div class="workspace">
+
+  <button id="reload-js">Run Javascript</button>
+
+  <!-- Controls -->
+  <div class="controls">
+      <a class="brand" href="/projects">Dash</a>
+    <span class="save-status">All changes saved.</span>
+    <ul class="nav">
+      <li id="nav-lesson" class="nav-item nav-slides active">Lesson</li>
+      <li id="nav-forum" class="nav-item nav-forum">Q&amp;A Forum</li>
+      <li id="nav-skills" class="nav-item nav-skills">Skills</li>
+    </ul>
+  </div>
+
+  <!-- Lesson -->
+  <div id="tab-lesson" class="tab tab-active">
+    <div class="prev"></div>
+    <div class="next"></div>
+    <div class="slide"></div>
+    <div class="slide-previewer"></div>
+    <div class='progress'>
+      <div class="progress-bar-background"></div>
+      <div class="progress-bar"></div>
+    </div>
+    <div class="slide-controls">
+      <div class="prev-button"></div>
+      <div class="slide-num">
+        <span class="current-slide"></span>/<span class="total-slides"></span>
+      </div>
+      <div class="next-button"></div>
+    </div>
+  </div>
+
+  <!-- Skills -->
+  <div id="tab-skills" class="tab">
+    <div class="tab-skills-inner">
+        <h2>Project 1: Build a personal website</h2>
+          <div class="skills">
+              <span class="skill
+                skill-type-html
+                has-skill-true"
+                data-name="h1-h6"
+                data-description="Document headings and sub-headings. The bigger the number, the smaller the size.">
+                h1-h6
+                <div class="skill-example-holder">
+                  <div class="CodeRay">
+  <div class="code"><pre><span class="tag">&lt;h1&gt;</span>I’m a main heading<span class="tag">&lt;/h1&gt;</span><br><span class="tag">&lt;h2&gt;</span>I’m a subheading<span class="tag">&lt;/h2&gt;</span><br><span class="tag">&lt;h6&gt;</span>I’m the smallest<span class="tag">&lt;/h6&gt;</span></pre></div>
+</div>
+
+                </div>
+              </span>
+              <span class="skill
+                skill-type-html
+                has-skill-true"
+                data-name="email input"
+                data-description="A type of input that takes user email addresses. New in HTML5.">
+                email input
+                <div class="skill-example-holder">
+                  <div class="CodeRay">
+  <div class="code"><pre><span class="tag">&lt;input</span> <span class="attribute-name">type</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">email</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">placeholder</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">Your email</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span></pre></div>
+</div>
+
+                </div>
+              </span>
+              <span class="skill
+                skill-type-html
+                has-skill-true"
+                data-name="submit input"
+                data-description="Makes a button to submit information from a form to a server.">
+                submit input
+                <div class="skill-example-holder">
+                  <div class="CodeRay">
+  <div class="code"><pre><span class="tag">&lt;input</span> <span class="attribute-name">type</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">submit</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span></pre></div>
+</div>
+
+                </div>
+              </span>
+              <span class="skill
+                skill-type-html
+                has-skill-true"
+                data-name="p"
+                data-description="The p tag makes paragraph elements">
+                p
+                <div class="skill-example-holder">
+                  <div class="CodeRay">
+  <div class="code"><pre><span class="tag">&lt;p&gt;</span>I am a cool paragraph, full of text<span class="tag">&lt;/p&gt;</span></pre></div>
+</div>
+
+                </div>
+              </span>
+              <span class="skill
+                skill-type-html
+                has-skill-true"
+                data-name="placeholder"
+                data-description="Puts placeholder text in an input. The text will disappear when a user types their own content.">
+                placeholder
+                <div class="skill-example-holder">
+                  <div class="CodeRay">
+  <div class="code"><pre><span class="tag">&lt;input</span> <span class="attribute-name">type</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">text</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">placeholder</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">Your name</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span></pre></div>
+</div>
+
+                </div>
+              </span>
+          </div>
+          <div class="skills">
+              <span class="skill
+                skill-type-html
+                has-skill-true"
+                data-name="style"
+                data-description="An HTML tag that you can use to include CSS directly in your HTML file, rather than linking to an external CSS file.">
+                style
+                <div class="skill-example-holder">
+                  <div class="CodeRay">
+  <div class="code"><pre><span class="tag">&lt;style&gt;</span><br>&nbsp;&nbsp;&nbsp;body {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;color: black;<br>&nbsp;&nbsp;&nbsp;}<br><span class="tag">&lt;/style&gt;</span></pre></div>
+</div>
+
+                </div>
+              </span>
+              <span class="skill
+                skill-type-html
+                has-skill-true"
+                data-name="body"
+                data-description="The body tag goes around all the content that&#39;s visible on the page">
+                body
+                <div class="skill-example-holder">
+                  <div class="CodeRay">
+  <div class="code"><pre><span class="tag">&lt;body&gt;</span><br>&nbsp;&nbsp;&nbsp;<span class="comment">&lt;!-- Content goes here --&gt;</span><br><span class="tag">&lt;/body&gt;</span></pre></div>
+</div>
+
+                </div>
+              </span>
+              <span class="skill
+                skill-type-html
+                has-skill-true"
+                data-name="head"
+                data-description="The head tag holds all information about the page that isn&#39;t directly displayed on the page.">
+                head
+                <div class="skill-example-holder">
+                  <div class="CodeRay">
+  <div class="code"><pre><span class="tag">&lt;head&gt;</span><br>&nbsp;&nbsp;&nbsp;<span class="tag">&lt;title&gt;</span>General Assembly<span class="tag">&lt;/title&gt;</span><br>&nbsp;&nbsp;&nbsp;<span class="tag">&lt;style&gt;</span><span class="tag">&lt;/style&gt;</span><br><span class="tag">&lt;/head&gt;</span></pre></div>
+</div>
+
+                </div>
+              </span>
+              <span class="skill
+                skill-type-html
+                has-skill-true"
+                data-name="title"
+                data-description="The title tag is used to give the webpage a title for browser tabs and search engines.">
+                title
+                <div class="skill-example-holder">
+                  <div class="CodeRay">
+  <div class="code"><pre><span class="tag">&lt;title&gt;</span>General Assembly<span class="tag">&lt;/title&gt;</span></pre></div>
+</div>
+
+                </div>
+              </span>
+              <span class="skill
+                skill-type-css
+                has-skill-true"
+                data-name="text-align"
+                data-description="Controls the alignment of all the text in an element. Can be left, right, centered, or justified.">
+                text-align
+                <div class="skill-example-holder">
+                  <div class="CodeRay">
+  <div class="code"><pre><span class="type">h1</span> {<span class="key"><br>&nbsp;&nbsp;&nbsp;</span> <span class="key">text-align</span>: <span class="value">center</span>;<span class="key"><br></span>}</pre></div>
+</div>
+
+                </div>
+              </span>
+              <span class="skill
+                skill-type-css
+                has-skill-true"
+                data-name="background"
+                data-description="This sets the background of an element to either a color or an image (or both)">
+                background
+                <div class="skill-example-holder">
+                  <div class="CodeRay">
+  <div class="code"><pre><span class="type">body</span> {<span class="key"><br>&nbsp;&nbsp;&nbsp;background</span>: <span class="color">#000</span> <span class="function"><span class="delimiter">url(</span><span class="content">&quot;/assets/bg.jpg&quot;</span><span class="delimiter">)</span></span>;<span class="key"><br></span>}</pre></div>
+</div>
+
+                </div>
+              </span>
+              <span class="skill
+                skill-type-css
+                has-skill-true"
+                data-name="font-family"
+                data-description="Sets the font used in an element.">
+                font-family
+                <div class="skill-example-holder">
+                  <div class="CodeRay">
+  <div class="code"><pre><span class="type">h1</span> {<span class="key"><br>&nbsp;&nbsp;&nbsp;font-family</span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">Helvetica Neue</span><span class="delimiter">&quot;</span></span>, <span class="value">helvetica</span>, <span class="value">sans-serif</span>;<span class="key"><br></span>}</pre></div>
+</div>
+
+                </div>
+              </span>
+              <span class="skill
+                skill-type-css
+                has-skill-true"
+                data-name="color"
+                data-description="Changes the text&#39;s color inside an element.">
+                color
+                <div class="skill-example-holder">
+                  <div class="CodeRay">
+  <div class="code"><pre><span class="type">body</span> {<span class="key"><br>&nbsp;&nbsp;&nbsp;color</span>: <span class="value">red</span>;<span class="key"><br></span>}</pre></div>
+</div>
+
+                </div>
+              </span>
+          </div>
+          <div class="skills">
+              <span class="skill
+                skill-type-html
+                has-skill-true"
+                data-name="img"
+                data-description="Creates an image element on the page. The src should be equal to a URL pointing at an image file.">
+                img
+                <div class="skill-example-holder">
+                  <div class="CodeRay">
+  <div class="code"><pre><span class="tag">&lt;img</span> <span class="attribute-name">src</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">/assets/anna.jpg</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span></pre></div>
+</div>
+
+                </div>
+              </span>
+              <span class="skill
+                skill-type-css
+                has-skill-true"
+                data-name="background-size"
+                data-description="Changes the size of a background image. Can be set to a value in pixels, percent, or the keywords &quot;cover&quot; or &quot;contain&quot;.">
+                background-size
+                <div class="skill-example-holder">
+                  <div class="CodeRay">
+  <div class="code"><pre><span class="tag">body</span> {<span class="error">\</span><span class="key">n</span><span class="error">\</span><span class="key">tbackground-size</span>: <span class="float">50%</span>;<span class="error">\</span><span class="key">n</span>}</pre></div>
+</div>
+
+                </div>
+              </span>
+              <span class="skill
+                skill-type-css
+                has-skill-true"
+                data-name="background-position"
+                data-description="Controls where the background image is placed in an element. The unit can be set to a value in pixels, percent, or keywords such as left, top, center, etc.">
+                background-position
+                <div class="skill-example-holder">
+                  <div class="CodeRay">
+  <div class="code"><pre><span class="tag">body</span> {<span class="error">\</span><span class="key">n</span><span class="error">\</span><span class="key">tbackground-position</span>: <span class="float">10px</span> <span class="float">50px</span>;<span class="error">\</span><span class="key">n</span>}</pre></div>
+</div>
+
+                </div>
+              </span>
+              <span class="skill
+                skill-type-css
+                has-skill-true"
+                data-name="font-size"
+                data-description="Controls the size of the font in an element.">
+                font-size
+                <div class="skill-example-holder">
+                  <div class="CodeRay">
+  <div class="code"><pre><span class="tag">body</span> {<span class="error">\</span><span class="key">n</span><span class="error">\</span><span class="key">tfont-size</span>: <span class="float">18px</span>;<span class="error">\</span><span class="key">n</span>}</pre></div>
+</div>
+
+                </div>
+              </span>
+              <span class="skill
+                skill-type-css
+                has-skill-true"
+                data-name="border"
+                data-description="Controls the border of an element. It can take 3 options - width (in pixels), type (solid, dashed, etc), and color. Some elements, like inputs, come with a default border. Setting border to 0 resets it.">
+                border
+                <div class="skill-example-holder">
+                  <div class="CodeRay">
+  <div class="code"><pre><span class="tag">h1</span> {<span class="error">\</span><span class="key">n</span><span class="error">\</span><span class="key">tborder</span>: <span class="float">1px</span> <span class="value">solid</span> <span class="value">black</span>;<span class="error">\</span><span class="key">n</span>}</pre></div>
+</div>
+
+                </div>
+              </span>
+              <span class="skill
+                skill-type-css
+                has-skill-true"
+                data-name="padding"
+                data-description="Controls the amount of space between the edge of an element and the stuff inside it.">
+                padding
+                <div class="skill-example-holder">
+                  <div class="CodeRay">
+  <div class="code"><pre><span class="tag">input</span> {<span class="error">\</span><span class="key">n</span><span class="error">\</span><span class="key">tpadding</span>: <span class="float">10px</span>;<span class="error">\</span><span class="key">n</span>}</pre></div>
+</div>
+
+                </div>
+              </span>
+              <span class="skill
+                skill-type-css
+                has-skill-true"
+                data-name="attribute selectors"
+                data-description="A CSS selector that lets you choose elements based on the value of their attributes.">
+                attribute selectors
+                <div class="skill-example-holder">
+                  <div class="CodeRay">
+  <div class="code"><pre><span class="tag">input</span>[<span class="attribute-name">type=&quot;submit&quot;</span>] {<span class="error">\</span><span class="key">n</span><span class="error">\</span><span class="key">tbackground</span>: <span class="value">red</span>;<span class="error">\</span><span class="key">n</span>}</pre></div>
+</div>
+
+                </div>
+              </span>
+          </div>
+          <div class="skills">
+          </div>
+        <h2>Project 2: Build a responsive blog theme</h2>
+          <div class="skills">
+              <span class="skill
+                skill-type-html
+                has-skill-true"
+                data-name="header"
+                data-description="The header tag is a container element that&#39;s used to group together everything that goes in a header section on the page.">
+                header
+                <div class="skill-example-holder">
+                  <div class="CodeRay">
+  <div class="code"><pre><span class="tag">&lt;header&gt;</span><br>&nbsp;&nbsp;&nbsp;<span class="tag">&lt;h1&gt;</span>This is my site<span class="tag">&lt;/h1&gt;</span><br><span class="tag">&lt;/header&gt;</span></pre></div>
+</div>
+
+                </div>
+              </span>
+              <span class="skill
+                skill-type-html
+                has-skill-true"
+                data-name="li"
+                data-description="The list item tag can go in an ordered or unordered list. It&#39;s the individual list item in a list of things.">
+                li
+                <div class="skill-example-holder">
+                  <div class="CodeRay">
+  <div class="code"><pre><span class="tag">&lt;ul&gt;</span><br>&nbsp;&nbsp;&nbsp;<span class="tag">&lt;li&gt;</span>Pickles<span class="tag">&lt;/li&gt;</span><br>&nbsp;&nbsp;&nbsp;<span class="tag">&lt;li&gt;</span>Mayo<span class="tag">&lt;/li&gt;</span><br>&nbsp;&nbsp;&nbsp;<span class="tag">&lt;li&gt;</span>Mustard<span class="tag">&lt;/li&gt;</span><br><span class="tag">&lt;/ul&gt;</span></pre></div>
+</div>
+
+                </div>
+              </span>
+              <span class="skill
+                skill-type-html
+                has-skill-true"
+                data-name="a"
+                data-description="The a tag makes links. It has an attribute called href that should be set to a URL you want the browser to open when clicked.">
+                a
+                <div class="skill-example-holder">
+                  <div class="CodeRay">
+  <div class="code"><pre><span class="tag">&lt;a</span> <span class="attribute-name">href</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">http://www.google.com</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>Google<span class="tag">&lt;/a&gt;</span></pre></div>
+</div>
+
+                </div>
+              </span>
+              <span class="skill
+                skill-type-html
+                has-skill-true"
+                data-name="ul"
+                data-description="The unordered list tag makes bulleted lists. Used in conjunction with the &lt;li&gt; tag.">
+                ul
+                <div class="skill-example-holder">
+                  <div class="CodeRay">
+  <div class="code"><pre><span class="tag">&lt;ul&gt;</span><br>&nbsp;&nbsp;&nbsp;<span class="tag">&lt;li&gt;</span>Ketchup<span class="tag">&lt;/li&gt;</span><br>&nbsp;&nbsp;&nbsp;<span class="tag">&lt;li&gt;</span>Mayo<span class="tag">&lt;/li&gt;</span><br>&nbsp;&nbsp;&nbsp;<span class="tag">&lt;li&gt;</span>Mustard<span class="tag">&lt;/li&gt;</span><br><span class="tag">&lt;/ul&gt;</span></pre></div>
+</div>
+
+                </div>
+              </span>
+          </div>
+          <div class="skills">
+              <span class="skill
+                skill-type-html
+                has-skill-true"
+                data-name="link"
+                data-description="An HTML tag that lets you include external stylesheets in your webpage.">
+                link
+                <div class="skill-example-holder">
+                  <div class="CodeRay">
+  <div class="code"><pre><span class="tag">&lt;link</span> <span class="attribute-name">href</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">style.css</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">rel</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">stylesheet</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span></pre></div>
+</div>
+
+                </div>
+              </span>
+              <span class="skill
+                skill-type-css
+                has-skill-true"
+                data-name="display"
+                data-description="The display property controls whether an element should be block (full width of page, on a new line) or inline (contained in text). ">
+                display
+                <div class="skill-example-holder">
+                  <div class="CodeRay">
+  <div class="code"><pre><span class="tag">li</span> {<span class="error">\</span><span class="key">n</span><span class="error">\</span><span class="key">tdisplay</span>: <span class="value">inline</span>;<span class="error">\</span><span class="key">n</span>}</pre></div>
+</div>
+
+                </div>
+              </span>
+              <span class="skill
+                skill-type-css
+                has-skill-true"
+                data-name="margin"
+                data-description="Margin controls the amount of space between the outside of an element and other nearby elements.">
+                margin
+                <div class="skill-example-holder">
+                  <div class="CodeRay">
+  <div class="code"><pre><span class="tag">h1</span> {<span class="error">\</span><span class="key">n</span><span class="error">\</span><span class="key">tmargin</span>: <span class="float">40px</span> <span class="float">0px</span> <span class="float">0px</span> <span class="float">0px</span>;<span class="error">\</span><span class="key">n</span>}</pre></div>
+</div>
+
+                </div>
+              </span>
+              <span class="skill
+                skill-type-css
+                has-skill-true"
+                data-name="border-radius"
+                data-description="Makes an element have rounded corners. Can take 1, 2, or 4 arguments (like padding).">
+                border-radius
+                <div class="skill-example-holder">
+                  <div class="CodeRay">
+  <div class="code"><pre><span class="tag">img</span> {<span class="error">\</span><span class="key">n</span><span class="error">\</span><span class="key">tborder-radius</span>: <span class="float">10px</span>;<span class="error">\</span><span class="key">n</span>}</pre></div>
+</div>
+
+                </div>
+              </span>
+              <span class="skill
+                skill-type-css
+                has-skill-true"
+                data-name="padding 2"
+                data-description="You can control the padding of each side individually by passing 4 values - top, bottom, left, and right.">
+                padding 2
+                <div class="skill-example-holder">
+                  <div class="CodeRay">
+  <div class="code"><pre><span class="tag">li</span> {<span class="error">\</span><span class="key">n</span><span class="error">\</span><span class="key">tpadding</span>: <span class="float">10px</span> <span class="float">20px</span> <span class="float">30px</span> <span class="float">40px</span>;<span class="error">\</span><span class="key">n</span>}</pre></div>
+</div>
+
+                </div>
+              </span>
+          </div>
+          <div class="skills">
+              <span class="skill
+                skill-type-css
+                has-skill-true"
+                data-name="max-width"
+                data-description="Setting an element&#39;s max-width lets an element expand in width only up until a certain point. It can be any width smaller than the size you specify, though.">
+                max-width
+                <div class="skill-example-holder">
+                  <div class="CodeRay">
+  <div class="code"><pre><span class="type">article</span> {<span class="key"><br>&nbsp;&nbsp;&nbsp;max-width</span>: <span class="float">500px</span>;<span class="key"><br></span>}</pre></div>
+</div>
+
+                </div>
+              </span>
+              <span class="skill
+                skill-type-html
+                has-skill-true"
+                data-name="article"
+                data-description="The article tag is meant to go around blog posts, news articles, essays, and any other bit of content that could stand alone and is meant to be read.">
+                article
+                <div class="skill-example-holder">
+                  <div class="CodeRay">
+  <div class="code"><pre><span class="tag">&lt;article&gt;</span><br>&nbsp;&nbsp;&nbsp;<span class="tag">&lt;h2&gt;</span>This is my blog post title<span class="tag">&lt;/h2&gt;</span><br>&nbsp;&nbsp;&nbsp;<span class="tag">&lt;p&gt;</span>Here is my text<span class="tag">&lt;/p&gt;</span><br><span class="tag">&lt;/article&gt;</span></pre></div>
+</div>
+
+                </div>
+              </span>
+              <span class="skill
+                skill-type-css
+                has-skill-true"
+                data-name="margin: 0 auto;"
+                data-description="The margin: 0 auto; trick lets you make a &quot;page&quot; on the screen by centering elements on the page without centering the text inside it. Must set a width for it to work.">
+                margin: 0 auto;
+                <div class="skill-example-holder">
+                  <div class="CodeRay">
+  <div class="code"><pre><span class="class">.container</span> {<span class="key"><br>&nbsp;&nbsp;&nbsp;margin</span>: <span class="float">0</span> <span class="value">auto</span>;<span class="key"><br></span>}</pre></div>
+</div>
+
+                </div>
+              </span>
+              <span class="skill
+                skill-type-html
+                has-skill-true"
+                data-name="script"
+                data-description="An HTML tag you can use to include javascript in your HTML file. Can come from an external source file or you can write the javascript right in the tag.">
+                script
+                <div class="skill-example-holder">
+                  <div class="CodeRay">
+  <div class="code"><pre><span class="tag">&lt;script&gt;</span><span class="inline">alert(<span class="string"><span class="delimiter">'</span><span class="content">hi</span><span class="delimiter">'</span></span>);</span><span class="tag">&lt;/script&gt;</span></pre></div>
+</div>
+
+                </div>
+              </span>
+              <span class="skill
+                skill-type-javascript
+                has-skill-true"
+                data-name="on()"
+                data-description="The &quot;on&quot; function is provided by jQuery, and lets you listen to events on elements.">
+                on()
+                <div class="skill-example-holder">
+                  <div class="CodeRay">
+  <div class="code"><pre><span class="predefined">$</span>(<span class="string"><span class="delimiter">'</span><span class="content">h1</span><span class="delimiter">'</span></span>).on(<span class="string"><span class="delimiter">'</span><span class="content">mouseover</span><span class="delimiter">'</span></span>, <span class="keyword">function</span>() {<br>&nbsp;&nbsp;&nbsp;alert(<span class="string"><span class="delimiter">'</span><span class="content">mouseover!</span><span class="delimiter">'</span></span>);<br>});</pre></div>
+</div>
+
+                </div>
+              </span>
+              <span class="skill
+                skill-type-html
+                has-skill-true"
+                data-name="button"
+                data-description="The button tag lets you make simple buttons. Pretty self explanatory ;)">
+                button
+                <div class="skill-example-holder">
+                  <div class="CodeRay">
+  <div class="code"><pre><span class="tag">&lt;button&gt;</span>Press me<span class="tag">&lt;/button&gt;</span></pre></div>
+</div>
+
+                </div>
+              </span>
+              <span class="skill
+                skill-type-javascript
+                has-skill-true"
+                data-name="alert()"
+                data-description="The alert() function causes the browser to pop up a message with some text in it.">
+                alert()
+                <div class="skill-example-holder">
+                  <div class="CodeRay">
+  <div class="code"><pre>alert(<span class="string"><span class="delimiter">'</span><span class="content">Hi there!</span><span class="delimiter">'</span></span>);</pre></div>
+</div>
+
+                </div>
+              </span>
+              <span class="skill
+                skill-type-css
+                has-skill-true"
+                data-name="hex color"
+                data-description="Hex color codes let you specify in more detail the exact color you want.">
+                hex color
+                <div class="skill-example-holder">
+                  <div class="CodeRay">
+  <div class="code"><pre><span class="type">body</span> {<span class="key"><br>&nbsp;&nbsp;&nbsp;background</span>: <span class="color">#f00</span>;<span class="key"><br></span>}</pre></div>
+</div>
+
+                </div>
+              </span>
+              <span class="skill
+                skill-type-css
+                has-skill-true"
+                data-name="media queries"
+                data-description="Media queries let you create CSS styles that are only activated under certain conditions (for example, if the browser is smaller than 500px wide).">
+                media queries
+                <div class="skill-example-holder">
+                  <div class="CodeRay">
+  <div class="code"><pre><span class="directive">@media</span> (<span class="type">max-width</span>: <span class="float">500px</span>) {<span class="type"><br>&nbsp;&nbsp;&nbsp;body</span> {<span class="key"><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;background</span>: <span class="value">red</span>;<span class="key"><br>&nbsp;&nbsp;&nbsp;</span>}<span class="type"><br></span>}</pre></div>
+</div>
+
+                </div>
+              </span>
+              <span class="skill
+                skill-type-css
+                has-skill-true"
+                data-name="rgba color"
+                data-description="RGBA colors are like hex colors, but they have a different syntax and let you control alpha (transparency).">
+                rgba color
+                <div class="skill-example-holder">
+                  <div class="CodeRay">
+  <div class="code"><pre><span class="type">body</span> {<span class="key"><br>&nbsp;&nbsp;&nbsp;background</span>: <span class="color">rgba(255,0,0,.5)</span>;<span class="key"><br></span>}</pre></div>
+</div>
+
+                </div>
+              </span>
+          </div>
+          <div class="skills">
+          </div>
+        <h2>Project 3: Build a small business website</h2>
+          <div class="skills">
+              <span class="skill
+                skill-type-html
+                has-skill-true"
+                data-name="class"
+                data-description="Class specifies a style for a select group of HTML elements.	">
+                class
+                <div class="skill-example-holder">
+                  <div class="CodeRay">
+  <div class="code"><pre><span class="tag">&lt;p</span> <span class="attribute-name">class</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">fantastic</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>My format is special!<span class="tag">&lt;/p&gt;</span><br><span class="tag">&lt;p</span> <span class="attribute-name">class</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">spectacular</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>I do not look like you.<span class="tag">&lt;/p&gt;</span></pre></div>
+</div>
+
+                </div>
+              </span>
+              <span class="skill
+                skill-type-css
+                has-skill-true"
+                data-name="position: relative"
+                data-description="Positions an element relative to where it&#39;s normally supposed to be on the screen. ">
+                position: relative
+                <div class="skill-example-holder">
+                  <div class="CodeRay">
+  <div class="code"><pre><span class="tag">h2</span> {<span class="error">\</span><span class="key">n</span><span class="error">\</span><span class="key">tposition</span>: <span class="value">relative</span>;<span class="error">\</span><span class="key">n</span><span class="error">\</span><span class="key">tleft</span>:<span class="float">20px</span>;<span class="error">\</span><span class="key">n</span>}</pre></div>
+</div>
+
+                </div>
+              </span>
+              <span class="skill
+                skill-type-css
+                has-skill-true"
+                data-name="height"
+                data-description="Sets the height of an element explicitly (rather than based on the height of the stuff inside it).">
+                height
+                <div class="skill-example-holder">
+                  <div class="CodeRay">
+  <div class="code"><pre><span class="tag">div</span> {<span class="error">\</span><span class="key">n</span><span class="error">\</span><span class="key">theight</span>: <span class="float">300px</span>;<span class="error">\</span><span class="key">n</span>} </pre></div>
+</div>
+
+                </div>
+              </span>
+              <span class="skill
+                skill-type-css
+                has-skill-true"
+                data-name="bottom"
+                data-description="Sets an element&#39;s distance from the bottom of a page or container.">
+                bottom
+                <div class="skill-example-holder">
+                  <div class="CodeRay">
+  <div class="code"><pre><span class="class">.copyright</span> {<span class="error">\</span><span class="key">n</span><span class="error">\</span><span class="key">tbottom</span>: <span class="float">0px</span>;<span class="error">\</span><span class="key">n</span>}</pre></div>
+</div>
+
+                </div>
+              </span>
+              <span class="skill
+                skill-type-html
+                has-skill-true"
+                data-name="div"
+                data-description="A generic container element you can put other HTML elements inside.">
+                div
+                <div class="skill-example-holder">
+                  <div class="CodeRay">
+  <div class="code"><pre><span class="tag">&lt;div&gt;</span><br>&nbsp;&nbsp;&nbsp;<span class="tag">&lt;h1&gt;</span>I'm contained!<span class="tag">&lt;/h1&gt;</span><br>&nbsp;&nbsp;&nbsp;<span class="tag">&lt;p&gt;</span>So am I<span class="tag">&lt;/p&gt;</span><br><span class="tag">&lt;/div&gt;</span></pre></div>
+</div>
+
+                </div>
+              </span>
+              <span class="skill
+                skill-type-html
+                has-skill-true"
+                data-name="small"
+                data-description="Makes any text a bit smaller than the text surrounding it.">
+                small
+                <div class="skill-example-holder">
+                  <div class="CodeRay">
+  <div class="code"><pre><span class="tag">&lt;p&gt;</span>Be very, <span class="tag">&lt;small&gt;</span>very<span class="tag">&lt;/small&gt;</span> quiet.<span class="tag">&lt;/p&gt;</span></pre></div>
+</div>
+
+                </div>
+              </span>
+              <span class="skill
+                skill-type-html
+                has-skill-true"
+                data-name="line break"
+                data-description="Inserts a single line break within a larger section of text.">
+                line break
+                <div class="skill-example-holder">
+                  <div class="CodeRay">
+  <div class="code"><pre><span class="tag">&lt;p&gt;</span>Twinkle twinkle, little star<span class="tag">&lt;br</span> <span class="tag">/&gt;</span><br>how I wonder what you are.<span class="tag">&lt;/p</span></pre></div>
+</div>
+
+                </div>
+              </span>
+              <span class="skill
+                skill-type-html
+                has-skill-true"
+                data-name="class"
+                data-description="Class specifies a style for a select group of HTML elements.	">
+                class
+                <div class="skill-example-holder">
+                  <div class="CodeRay">
+  <div class="code"><pre><span class="tag">&lt;p</span> <span class="attribute-name">class</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">fantastic</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>My format is special!<span class="tag">&lt;/p&gt;</span><br><span class="tag">&lt;p</span> <span class="attribute-name">class</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">spectacular</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>I do not look like you.<span class="tag">&lt;/p&gt;</span></pre></div>
+</div>
+
+                </div>
+              </span>
+              <span class="skill
+                skill-type-css
+                has-skill-true"
+                data-name="position: absolute"
+                data-description="Allows you to style elements that will be ignored by, and will ignore, everything else on the page and will always stay where they are told.">
+                position: absolute
+                <div class="skill-example-holder">
+                  <div class="CodeRay">
+  <div class="code"><pre><span class="class">.sidebar</span> {<span class="error">\</span><span class="key">n</span><span class="error">\</span><span class="key">tposition</span>: <span class="value">absolute</span>;<span class="error">\</span><span class="key">n</span>}</pre></div>
+</div>
+
+                </div>
+              </span>
+          </div>
+          <div class="skills">
+              <span class="skill
+                skill-type-html
+                has-skill-true"
+                data-name="span"
+                data-description="The span tag creates a generic inline container, and allows you to change the appearance of part of the tag that contains it.">
+                span
+                <div class="skill-example-holder">
+                  <div class="CodeRay">
+  <div class="code"><pre><span class="tag">&lt;p&gt;</span>All of this text is very boring, except for <span class="tag">&lt;span</span> <span class="attribute-name">class</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">fancy</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>this bit of completely different-looking text<span class="tag">&lt;/span&gt;</span>, which just ended. <span class="tag">&lt;/p&gt;</span></pre></div>
+</div>
+
+                </div>
+              </span>
+              <span class="skill
+                skill-type-css
+                has-skill-true"
+                data-name="float"
+                data-description="A float shifts content to the far-left or far-right within the current line. Content flows down the right side of a left-floated box and down the left side of a right-floated box.">
+                float
+                <div class="skill-example-holder">
+                  <div class="CodeRay">
+  <div class="code"><pre><span class="class">.sidebar</span> {<span class="error">\</span><span class="key">n</span><span class="error">\</span><span class="key">tfloat</span>: <span class="value">left</span>;<span class="error">\</span><span class="key">n</span>}</pre></div>
+</div>
+
+                </div>
+              </span>
+              <span class="skill
+                skill-type-css
+                has-skill-true"
+                data-name="gradient"
+                data-description="Gradients can transition between colors or between alphas. They require a start point, a start color, and an end color. You can set an angle to make diagonal gradients, or color-stops to create stripes. Currently, CSS gradients require vendor prefixes.">
+                gradient
+                <div class="skill-example-holder">
+                  <div class="CodeRay">
+  <div class="code"><pre><span class="tag">body</span> {<span class="error">\</span><span class="key">n</span><span class="error">\</span><span class="key">tbackground</span>: <span class="value">-webkit-linear-gradient</span> (<span class="value">top</span>, <span class="color">#bada55</span>, <span class="color">#c0ffee</span>);<span class="error">\</span><span class="key">n</span><span class="error">\</span><span class="key">tbackground</span>: <span class="value">-moz-linear-gradient</span> (<span class="value">top</span>, <span class="color">#bada55</span>, <span class="color">#c0ffee</span>);<span class="error">\</span><span class="key">n</span><span class="error">\</span><span class="key">tbackground</span>: <span class="value">-o-linear-gradient</span> (<span class="value">top</span>, <span class="color">#bada55</span>, <span class="color">#c0ffee</span>);}</pre></div>
+</div>
+
+                </div>
+              </span>
+              <span class="skill
+                skill-type-html
+                has-skill-true"
+                data-name="span"
+                data-description="The span tag creates a generic inline container, and allows you to change the appearance of part of the tag that contains it.">
+                span
+                <div class="skill-example-holder">
+                  <div class="CodeRay">
+  <div class="code"><pre><span class="tag">&lt;p&gt;</span>All of this text is very boring, except for <span class="tag">&lt;span</span> <span class="attribute-name">class</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">fancy</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>this bit of completely different-looking text<span class="tag">&lt;/span&gt;</span>, which just ended.<span class="tag">&lt;/p&gt;</span></pre></div>
+</div>
+
+                </div>
+              </span>
+          </div>
+          <div class="skills">
+              <span class="skill
+                skill-type-css
+                has-skill-true"
+                data-name="transition"
+                data-description="Builds time-dependant behaviors into the transition between two different sets of CSS properties assigned to the same HTML element.">
+                transition
+                <div class="skill-example-holder">
+                  <div class="CodeRay">
+  <div class="code"><pre><span class="type">div</span> {<span class="key"><br>&nbsp;&nbsp;&nbsp;transition</span>: <span class="value">height</span> <span class="float">.5s</span>,<span class="value"><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;background</span> <span class="float">.2s</span> <span class="value">ease</span>;<span class="key"><br></span>}</pre></div>
+</div>
+
+                </div>
+              </span>
+              <span class="skill
+                skill-type-css
+                has-skill-true"
+                data-name="opacity"
+                data-description="Opacity allows you to set the transparency of an element AND everything inside of it, from 100% (1) to 0% (0). Not to be confused with alpha.">
+                opacity
+                <div class="skill-example-holder">
+                  <div class="CodeRay">
+  <div class="code"><pre><span class="type">img</span> {<span class="key"><br>&nbsp;&nbsp;&nbsp;opacity</span>: <span class="float">.6</span>;<span class="key"><br></span>}</pre></div>
+</div>
+
+                </div>
+              </span>
+              <span class="skill
+                skill-type-javascript
+                has-skill-true"
+                data-name="toggleClass"
+                data-description="This function is provided by jQuery, and detects the presence of a specified CSS class on an HTML element. If the class is present, toggleClass removes it; if the class is not detected, toggleClass adds it.">
+                toggleClass
+                <div class="skill-example-holder">
+                  <div class="CodeRay">
+  <div class="code"><pre><span class="predefined">$</span>(<span class="string"><span class="delimiter">'</span><span class="content">img</span><span class="delimiter">'</span></span>).on(<span class="string"><span class="delimiter">'</span><span class="content">click</span><span class="delimiter">'</span></span>,<span class="error">\</span>sfunction() {<br>&nbsp;&nbsp;&nbsp;(<span class="local-variable">this</span>).toggleClass(<span class="string"><span class="delimiter">'</span><span class="content">caption</span><span class="delimiter">'</span></span>);<br>&nbsp;&nbsp;&nbsp;}</pre></div>
+</div>
+
+                </div>
+              </span>
+          </div>
+          <div class="skills">
+          </div>
+        <h2>Project 4: Build a CSS Robot</h2>
+          <div class="skills">
+              <span class="skill
+                skill-type-css
+                has-skill-true"
+                data-name="radial-gradient"
+                data-description="Radial gradients can transition between colors or between alphas. The basic syntax wants shape (ellipse or circle), inner color, outer color. Currently, needs vendor prefixes.">
+                radial-gradient
+                <div class="skill-example-holder">
+                  <div class="CodeRay">
+  <div class="code"><pre><span class="type">body</span> {<span class="key"><br>&nbsp;&nbsp;&nbsp;background</span>: <span class="error">r</span><span class="error">a</span><span class="error">d</span><span class="error">i</span><span class="error">a</span><span class="error">l</span><span class="error">-</span><span class="error">g</span><span class="error">r</span><span class="error">a</span><span class="error">d</span><span class="error">i</span><span class="error">e</span><span class="error">n</span><span class="error">t</span>(<span class="value">circle</span>, <span class="color">#c0ffee</span>, <span class="color">#bada55</span>);<span class="key"><br>&nbsp;&nbsp;&nbsp;background</span>: <span class="error">-</span><span class="error">m</span><span class="error">o</span><span class="error">z</span><span class="error">-</span><span class="error">r</span><span class="error">a</span><span class="error">d</span><span class="error">i</span><span class="error">a</span><span class="error">l</span><span class="error">-</span><span class="error">g</span><span class="error">r</span><span class="error">a</span><span class="error">d</span><span class="error">i</span><span class="error">e</span><span class="error">n</span><span class="error">t</span>(<span class="value">circle</span>, <span class="color">#c0ffee</span>, <span class="color">#bada55</span>);<span class="key"><br>&nbsp;&nbsp;&nbsp;background</span>: <span class="error">-</span><span class="error">w</span><span class="error">e</span><span class="error">b</span><span class="error">k</span><span class="error">i</span><span class="error">t</span><span class="error">-</span><span class="error">r</span><span class="error">a</span><span class="error">d</span><span class="error">i</span><span class="error">a</span><span class="error">l</span><span class="error">-</span><span class="error">g</span><span class="error">r</span><span class="error">a</span><span class="error">d</span><span class="error">i</span><span class="error">e</span><span class="error">n</span><span class="error">t</span>(<span class="value">circle</span>, <span class="color">#c0ffee</span>, <span class="color">#bada55</span>);<span class="key"><br>&nbsp;&nbsp;&nbsp;</span>}</pre></div>
+</div>
+
+                </div>
+              </span>
+          </div>
+          <div class="skills">
+              <span class="skill
+                skill-type-css
+                has-skill-true"
+                data-name="top"
+                data-description="Allows you to specify the distance between the top of an element and the top of its container.">
+                top
+                <div class="skill-example-holder">
+                  <div class="CodeRay">
+  <div class="code"><pre><span class="tag">div</span> {<span class="error">\</span><span class="key">n</span><span class="error">\</span><span class="key">tposition</span>: <span class="value">relative</span>;<span class="error">\</span><span class="key">n</span><span class="error">\</span><span class="key">ttop</span>: <span class="float">20px</span>;<span class="error">\</span><span class="key">n</span>}</pre></div>
+</div>
+
+                </div>
+              </span>
+              <span class="skill
+                skill-type-css
+                has-skill-true"
+                data-name="left"
+                data-description="Sets the distance a positioned element should be from the left-hand boundary of its containing element.">
+                left
+                <div class="skill-example-holder">
+                  <div class="CodeRay">
+  <div class="code"><pre><span class="tag">div</span> {<span class="error">\</span><span class="key">n</span><span class="error">\</span><span class="key">tposition</span>: <span class="value">relative</span>;<span class="error">\</span><span class="key">n</span><span class="error">\</span><span class="key">tleft</span>:<span class="float">20px</span>;<span class="error">\</span><span class="key">n</span>}</pre></div>
+</div>
+
+                </div>
+              </span>
+              <span class="skill
+                skill-type-css
+                has-skill-true"
+                data-name="transform: rotate"
+                data-description="Allows you to rotate an element clockwise by a specified number of degrees (out of 360). Use a negative value to rotate it counterclockwise.">
+                transform: rotate
+                <div class="skill-example-holder">
+                  <div class="CodeRay">
+  <div class="code"><pre></pre></div>
+</div>
+
+                </div>
+              </span>
+              <span class="skill
+                skill-type-css
+                has-skill-true"
+                data-name="z-index"
+                data-description="Allows you to &quot;stack&quot; HTML elements in front of or behind one another.">
+                z-index
+                <div class="skill-example-holder">
+                  <div class="CodeRay">
+  <div class="code"><pre><span class="tag">div</span> {<span class="error">\</span><span class="key">n</span><span class="error">\</span><span class="key">tposition</span>: <span class="value">relative</span>;<span class="error">\</span><span class="key">n</span><span class="error">\</span><span class="key">tz-index</span>:<span class="float">10</span>;<span class="error">\</span><span class="key">n</span>}</pre></div>
+</div>
+
+                </div>
+              </span>
+              <span class="skill
+                skill-type-css
+                has-skill-true"
+                data-name="font-weight"
+                data-description="Sets the weight of a font. Keywords are: normal, bold, bolder, and lighter. ">
+                font-weight
+                <div class="skill-example-holder">
+                  <div class="CodeRay">
+  <div class="code"><pre><span class="tag">h2</span> {<span class="error">\</span><span class="key">n</span><span class="error">\</span><span class="key">tfont-weight</span>: <span class="value">bolder</span>;<span class="error">\</span><span class="key">n</span>}</pre></div>
+</div>
+
+                </div>
+              </span>
+              <span class="skill
+                skill-type-css
+                has-skill-true"
+                data-name="transform: scaleY"
+                data-description="Resizes an element horizontally by the specified amount. The number is &quot;x times the size it is now,&quot; so scale .5 is half the size and a scale of 2 is twice the size.">
+                transform: scaleY
+                <div class="skill-example-holder">
+                  <div class="CodeRay">
+  <div class="code"><pre><span class="tag">img</span> {<span class="error">\</span><span class="key">n</span><span class="error">\</span><span class="key">ttransform</span>: <span class="error">s</span><span class="error">c</span><span class="error">a</span><span class="error">l</span><span class="error">e</span><span class="error">Y</span>(<span class="float">2</span>);<span class="error">\</span><span class="key">n</span>}</pre></div>
+</div>
+
+                </div>
+              </span>
+              <span class="skill
+                skill-type-css
+                has-skill-true"
+                data-name="animation"
+                data-description="Connects a CSS style to a keyframe animation. You need to tell it the animation&#39;s name, duration in seconds, and how many times to repeat (from 1 to infinite).">
+                animation
+                <div class="skill-example-holder">
+                  <div class="CodeRay">
+  <div class="code"><pre><span class="tag">div</span> {<span class="error">\</span><span class="key">n</span><span class="error">\</span><span class="key">tanimation</span>: <span class="value">bounce</span> <span class="float">2s</span> <span class="float">10</span>;<span class="error">\</span><span class="key">n</span>}</pre></div>
+</div>
+
+                </div>
+              </span>
+              <span class="skill
+                skill-type-css
+                has-skill-true"
+                data-name="@keyframes"
+                data-description="Create keyframes for animations. You can say from/to if you have two keyframes, or you can set multiple keyframes by specifying percentages.">
+                @keyframes
+                <div class="skill-example-holder">
+                  <div class="CodeRay">
+  <div class="code"><pre><span class="directive">@keyframes</span> <span class="tag">flip</span> {<span class="error">\</span><span class="key">n</span><span class="error">\</span><span class="key">t</span><span class="error">\</span><span class="float">20%</span> {<span class="key">n</span><span class="error">\</span><span class="key">tcolor</span>: <span class="value">red</span>;<span class="error">\</span><span class="key">n</span><span class="error">\</span><span class="key">t</span>}<span class="error">\</span><span class="key">n</span><span class="error">\</span><span class="key">t</span><span class="error">\</span><span class="float">80%</span> {<span class="key">n</span><span class="error">\</span><span class="key">tcolor</span>: <span class="value">yellow</span>;<span class="error">\</span><span class="key">n</span><span class="error">\</span><span class="key">t</span><span class="error">\</span><span class="key">n</span>}</pre></div>
+</div>
+
+                </div>
+              </span>
+          </div>
+          <div class="skills">
+              <span class="skill
+                skill-type-javascript
+                has-skill-true"
+                data-name="variable"
+                data-description="Variables capture and remember values. They always have names. Their names must be one word (no spaces). Names can contain letters or numbers but can’t start with a number. The only symbols allowed are $ and _. ">
+                variable
+                <div class="skill-example-holder">
+                  <div class="CodeRay">
+  <div class="code"><pre><span class="keyword">var</span> age = <span class="integer">28</span>;</pre></div>
+</div>
+
+                </div>
+              </span>
+              <span class="skill
+                skill-type-javascript
+                has-skill-true"
+                data-name="Math.floor"
+                data-description="This is a function that rounds any number down to the nearest whole number.">
+                Math.floor
+                <div class="skill-example-holder">
+                  <div class="CodeRay">
+  <div class="code"><pre>Math.floor(<span class="float">3.14159265359</span>); <span class="comment">// 3</span></pre></div>
+</div>
+
+                </div>
+              </span>
+              <span class="skill
+                skill-type-javascript
+                has-skill-true"
+                data-name="Math.random"
+                data-description="This function will return a random number between 0 and 1.">
+                Math.random
+                <div class="skill-example-holder">
+                  <div class="CodeRay">
+  <div class="code"><pre>Math.random(); </pre></div>
+</div>
+
+                </div>
+              </span>
+              <span class="skill
+                skill-type-javascript
+                has-skill-true"
+                data-name="function"
+                data-description="A function is a piece of a program that either does something useful or produces a value. It is a busy little machine. Functions are one of six named types of values in Javascript.">
+                function
+                <div class="skill-example-holder">
+                  <div class="CodeRay">
+  <div class="code"><pre><span class="keyword">function</span> <span class="function">greeting</span> (name) {<br>&nbsp;&nbsp;&nbsp;alert(<span class="string"><span class="delimiter">&quot;</span><span class="content">hello, </span><span class="delimiter">&quot;</span></span> + name + <span class="string"><span class="delimiter">&quot;</span><span class="content">!</span><span class="delimiter">&quot;</span></span>);<br>}</pre></div>
+</div>
+
+                </div>
+              </span>
+              <span class="skill
+                skill-type-javascript
+                has-skill-true"
+                data-name="javascript comments"
+                data-description="If you put two forward slashes in front of any line of script, JavaScript will ignore that line. Good for both explaining code to humans, and for debugging!">
+                javascript comments
+                <div class="skill-example-holder">
+                  <div class="CodeRay">
+  <div class="code"><pre><span class="comment">//JavaScript will ignore me, but people shouldn't</span></pre></div>
+</div>
+
+                </div>
+              </span>
+              <span class="skill
+                skill-type-javascript
+                has-skill-true"
+                data-name="click function"
+                data-description="The jQuery click function is a shorter, more concise way to do what on(‘click’) does.">
+                click function
+                <div class="skill-example-holder">
+                  <div class="CodeRay">
+  <div class="code"><pre><span class="predefined">$</span>(<span class="string"><span class="delimiter">'</span><span class="content">button</span><span class="delimiter">'</span></span>).click(<span class="keyword">function</span>() {<br>&nbsp;&nbsp;&nbsp;alert(<span class="string"><span class="delimiter">&quot;</span><span class="content">you clicked me!</span><span class="delimiter">&quot;</span></span>);<br>});</pre></div>
+</div>
+
+                </div>
+              </span>
+          </div>
+          <div class="skills">
+              <span class="skill
+                skill-type-javascript
+                has-skill-true"
+                data-name="toggle"
+                data-description="The JQuery toggle function lets you turn an HTML element visible or invisible. It affects all instances of the element, so if you have a lot of paragraphs or pictures and only want to toggle one, give that one a class name and toggle the class.">
+                toggle
+                <div class="skill-example-holder">
+                  <div class="CodeRay">
+  <div class="code"><pre>hello</pre></div>
+</div>
+
+                </div>
+              </span>
+              <span class="skill
+                skill-type-javascript
+                has-skill-true"
+                data-name="css function"
+                data-description="The css function in JQuery can be used in two ways. If you give it one value it &quot;returns&quot; a CSS property (basically, it finds it for you), and if you give it two values it “sets” a CSS property (changes the property before the comma to the value specified after the comma).">
+                css function
+                <div class="skill-example-holder">
+                  <div class="CodeRay">
+  <div class="code"><pre> <span class="predefined">$</span>(<span class="string"><span class="delimiter">&quot;</span><span class="content">body</span><span class="delimiter">&quot;</span></span>).css(<span class="string"><span class="delimiter">&quot;</span><span class="content">background</span><span class="delimiter">&quot;</span></span>);<br>&nbsp;&nbsp;&nbsp;alert(<span class="string"><span class="delimiter">&quot;</span><span class="content">background</span><span class="delimiter">&quot;</span></span>);<br><br> <span class="predefined">$</span>(<span class="string"><span class="delimiter">&quot;</span><span class="content">body</span><span class="delimiter">&quot;</span></span>).css(<span class="string"><span class="delimiter">&quot;</span><span class="content">background</span><span class="delimiter">&quot;</span></span>, <span class="string"><span class="delimiter">&quot;</span><span class="content">white</span><span class="delimiter">&quot;</span></span>);</pre></div>
+</div>
+
+                </div>
+              </span>
+              <span class="skill
+                skill-type-javascript
+                has-skill-true"
+                data-name="strings"
+                data-description="A string is just a bunch of text, and is also one of six value types in Javascript. Strings can hold any character, including spaces, and are super-easy to spot because they’re always inside single or double quotation marks. You can put single or double quotation marks inside strings if you “escape” them with a backslash.">
+                strings
+                <div class="skill-example-holder">
+                  <div class="CodeRay">
+  <div class="code"><pre> <span class="keyword">var</span> string = <span class="string"><span class="delimiter">&quot;</span><span class="content">hello, I</span><span class="char">\'</span><span class="content">m a string!</span><span class="delimiter">&quot;</span></span><br> <span class="keyword">var</span> me_too = <span class="string"><span class="delimiter">'</span><span class="content">I</span><span class="char">\'</span><span class="content">m also a string.</span><span class="delimiter">'</span></span></pre></div>
+</div>
+
+                </div>
+              </span>
+          </div>
+        <h2>Project 5: Build a Madlibs Game</h2>
+          <div class="skills">
+              <span class="skill
+                skill-type-javascript
+                has-skill-true"
+                data-name="array"
+                data-description="An array is a data type that can hold a list of items. Those items can be strings, numbers, etc. Arrays have lengths, and each item in them occupies a numerical position; the numbers start from zero.">
+                array
+                <div class="skill-example-holder">
+                  <div class="CodeRay">
+  <div class="code"><pre><span class="keyword">var</span> array = [thing, nextThing, anotherThing];</pre></div>
+</div>
+
+                </div>
+              </span>
+              <span class="skill
+                skill-type-javascript
+                has-skill-true"
+                data-name="length"
+                data-description="Length is a JQuery function that tells you the number of elements (i.e. little data storage boxes) in an array. You can use it to count other things, too, like the number of characters in a string.">
+                length
+                <div class="skill-example-holder">
+                  <div class="CodeRay">
+  <div class="code"><pre>alert(list.length);</pre></div>
+</div>
+
+                </div>
+              </span>
+              <span class="skill
+                skill-type-javascript
+                has-skill-true"
+                data-name="html function"
+                data-description="The jQuery html function allows you to move content that&#39;s generated or captured by your JavaScript into your HTML. It basically lets your JavaScript read and rewrite your HTML.">
+                html function
+                <div class="skill-example-holder">
+                  <div class="CodeRay">
+  <div class="code"><pre><span class="predefined">$</span>(<span class="string"><span class="delimiter">'</span><span class="content">button</span><span class="delimiter">'</span></span>).click(<span class="keyword">function</span>() {<br>&nbsp;&nbsp;&nbsp;(<span class="string"><span class="delimiter">'</span><span class="content">p</span><span class="delimiter">'</span></span>).html(<span class="string"><span class="delimiter">&quot;</span><span class="content">you clicked a button!</span><span class="delimiter">&quot;</span></span>);<br>});</pre></div>
+</div>
+
+                </div>
+              </span>
+          </div>
+          <div class="skills">
+          </div>
+          <div class="skills">
+              <span class="skill
+                skill-type-javascript
+                has-skill-true"
+                data-name="if "
+                data-description="if is a conditional statement in JavaScript. It requires two parts: a condition (in parentheses), and an action, {in curly braces}. If the condition is true, the &quot;action&quot; code will run.">
+                if 
+                <div class="skill-example-holder">
+                  <div class="CodeRay">
+  <div class="code"><pre><span class="keyword">if</span> (something) {<br>&nbsp;&nbsp;&nbsp;do a thing;<br>}</pre></div>
+</div>
+
+                </div>
+              </span>
+              <span class="skill
+                skill-type-javascript
+                has-skill-true"
+                data-name="else"
+                data-description="else is a conditional statement in JavaScript that only works if it immediately follows an if statement. It provides an alternative to the action contained in an if statement. The if statement says &quot;if X is true, do Y.&quot; The else statement says &quot;or else, do Z.&quot;">
+                else
+                <div class="skill-example-holder">
+                  <div class="CodeRay">
+  <div class="code"><pre><span class="keyword">if</span> (something) {<br>&nbsp;&nbsp;&nbsp;do a thing;<br>}<br>else {<br>&nbsp;&nbsp;&nbsp;do another thing;<br>}</pre></div>
+</div>
+
+                </div>
+              </span>
+          </div>
+          <div class="skills">
+              <span class="skill
+                skill-type-javascript
+                has-skill-true"
+                data-name="!"
+                data-description="You can use an exclamation point as a shortcut method to negate almost anything in Javascript.">
+                !
+                <div class="skill-example-holder">
+                  <div class="CodeRay">
+  <div class="code"><pre><span class="integer">500</span> != <span class="integer">100</span>;<br>!<span class="predefined-constant">true</span> = <span class="predefined-constant">false</span>;<br>!<span class="predefined-constant">false</span> = <span class="predefined-constant">true</span>;</pre></div>
+</div>
+
+                </div>
+              </span>
+              <span class="skill
+                skill-type-javascript
+                has-skill-true"
+                data-name="val()"
+                data-description="Val is a JQuery method. It’s used to grab values out of form elements &amp;lt;input&amp;gt;, &amp;lt;select&amp;gt;, and &amp;lt;textarea&amp;gt;. A less common use to to put content into forms.">
+                val()
+                <div class="skill-example-holder">
+                  <div class="CodeRay">
+  <div class="code"><pre>alert(<span class="predefined">$</span>(<span class="string"><span class="delimiter">'</span><span class="content">input</span><span class="delimiter">'</span></span>).val());</pre></div>
+</div>
+
+                </div>
+              </span>
+              <span class="skill
+                skill-type-javascript
+                has-skill-true"
+                data-name="push()"
+                data-description="Push is associated with arrays, and used to add values to an existing or empty array.">
+                push()
+                <div class="skill-example-holder">
+                  <div class="CodeRay">
+  <div class="code"><pre><span class="keyword">var</span> houses = []<br> houses(<span class="string"><span class="delimiter">&quot;</span><span class="content">stark</span><span class="delimiter">&quot;</span></span>, <span class="string"><span class="delimiter">&quot;</span><span class="content">lannister</span><span class="delimiter">&quot;</span></span>, <span class="string"><span class="delimiter">&quot;</span><span class="content">baratheon</span><span class="delimiter">&quot;</span></span>, <span class="string"><span class="delimiter">&quot;</span><span class="content">targaryen</span><span class="delimiter">&quot;</span></span>);</pre></div>
+</div>
+
+                </div>
+              </span>
+          </div>
+          <div class="skills">
+              <span class="skill
+                skill-type-javascript
+                has-skill-true"
+                data-name="hide()"
+                data-description="Hide is the easiest way to make an element disappear! By default, the element you name vanishes immediately, but hide() also lets you add options like timing and easing to make it more animated.">
+                hide()
+                <div class="skill-example-holder">
+                  <div class="CodeRay">
+  <div class="code"><pre><span class="predefined">$</span>(<span class="string"><span class="delimiter">&quot;</span><span class="content">div</span><span class="delimiter">&quot;</span></span>).hide();</pre></div>
+</div>
+
+                </div>
+              </span>
+          </div>
+    </div>
+  </div>
+
+
+  <!-- Forum -->
+  <div id="tab-forum" class="tab">
+    <h1>Stuck?</h1>
+    <p>Ask the community for help in our Facebook group!</p>
+    <a href="https://www.facebook.com/groups/845537888806274/" target="_blank" class="button">Launch the Facebook Group</a>
+  </div>
+
+  <!-- Editor -->
+  <div id="editor"></div>
+
+</div><!-- /workspace -->
+
+<script>
+  window.PAGEDATA = {"project":{"id":34,"default_html":"%3C%21DOCTYPE%20html%3E%0A%0A%3Chead%3E%0A%3Clink%20href%3D%27https%3A//fonts.googleapis.com/css%3Ffamily%3DPoller+One%27%20rel%3D%27stylesheet%27%20type%3D%27text/css%27%3E%0A%3Cscript%20src%3D%22/assets/jquery.js%22%3E%3C/script%3E%0A%3Cstyle%3E%0A%0A.robot%20%7B%0A%20%20position%3A%20relative%3B%0A%20%20left%3A%20200px%3B%0A%7D%0A%0A.beep%20%7B%0A%20%20width%3A%205px%3B%0A%20%20height%3A%200%3B%0A%20%20border%3A%205px%20solid%20transparent%3B%0A%20%20border-top%3A%2010px%20solid%20%23777%3B%0A%20%20border-bottom%3A%2080px%20solid%20%23888%3B%0A%20%20position%3A%20relative%3B%0A%20%20left%3A%20140px%3B%0A%7D%0A%0A@keyframes%20blink%20%7B%0A%20%2050%25%20%7B%0A%20%20%20%20background%3A%20radial-gradient%28circle%2C%20red%2015%25%2C%20transparent%2040%25%29%2C%20%23cc5%3B%0A%20%20%7D%0A%7D%0A@-webkit-keyframes%20blink%20%7B%0A%20%2050%25%20%7B%0A%20%20%20%20background%3A%20-webkit-radial-gradient%28circle%2C%20red%2015%25%2C%20transparent%2040%25%29%2C%20%23cc5%3B%0A%20%20%7D%0A%7D%0A@-moz-keyframes%20blink%20%7B%0A%20%2050%25%20%7B%0A%20%20%20%20background%3A%20-moz-radial-gradient%28circle%2C%20red%2015%25%2C%20transparent%2040%25%29%2C%20%23cc5%3B%0A%20%20%7D%0A%7D%0A.laser%20%7B%0A%20%20animation%3A%20blink%20.5s%20infinite%3B%0A%20%20-webkit-animation%3A%20blink%20.5s%20infinite%3B%0A%20%20-moz-animation%3A%20blink%20.5s%20infinite%3B%0A%7D%0A.brain%20%7B%0A%20%20background%3A%20radial-gradient%28circle%2C%20white%2015%25%2C%20transparent%2040%25%29%2C%20%23cc5%3B%0A%20%20background%3A%20-moz-radial-gradient%28circle%2C%20white%2015%25%2C%20transparent%2040%25%29%2C%20%23cc5%3B%20%0A%20%20background%3A%20-webkit-radial-gradient%28circle%2C%20white%2015%25%2C%20transparent%2040%25%29%2C%20%23cc5%3B%0A%20%20background-size%3A%2075px%20150px%3B%0A%20%20height%3A%20150px%3B%0A%20%20width%3A%20150px%3B%0A%20%20border-radius%3A%2060px%2060px%2010px%2010px%3B%0A%20%20border-bottom%3A%2040px%20solid%20%23666%3B%0A%20%20position%3A%20relative%3B%0A%20%20left%3A%2070px%3B%0A%7D%0A.torso%20%7B%0A%20%20height%3A%200%3B%0A%20%20width%3A%20140px%3B%0A%20%20border-top%3A%20300px%20solid%20%23bc6%3B%0A%20%20border-left%3A%2075px%20solid%20transparent%3B%0A%20%20border-right%3A%2075px%20solid%20transparent%3B%0A%20%20border-radius%3A%2020px%2020px%20100px%20100px%3B%0A%7D%0A.left%20%7B%0A%20%20font-family%3A%20%27Poller%20One%27%2C%20verdana%2C%20arial%2C%20sans-serif%3B%0A%20%20font-weight%3A%20bold%3B%0A%20%20font-size%3A%20250px%3B%0A%20%20color%3A%20%23666%3B%0A%20%20transform%3A%20rotate%28200deg%29%3B%0A%20%20-webkit-transform%3A%20rotate%28200deg%29%3B%0A%20%20-moz-transform%3A%20rotate%28200deg%29%3B%0A%20%20position%3A%20relative%3B%0A%20%20top%3A%20-320px%3B%0A%20%20left%3A%20-190px%3B%0A%20%20z-index%3A%20-1%3B%0A%7D%0A.right%20%7B%0A%20%20font-family%3A%20%27Poller%20One%27%2C%20verdana%2C%20arial%2C%20sans-serif%3B%0A%20%20font-weight%3A%20bold%3B%0A%20%20font-size%3A%20250px%3B%0A%20%20color%3A%20%23666%3B%0A%20%20transform%3A%20scaleY%28-1%29%20rotate%2820deg%29%3B%0A%20%20-webkit-transform%3A%20scaleY%28-1%29%20rotate%2820deg%29%3B%0A%20%20-moz-transform%3A%20scaleY%28-1%29%20rotate%2820deg%29%3B%0A%20%20position%3A%20relative%3B%0A%20%20top%3A%20-620px%3B%0A%20%20left%3A%20190px%3B%0A%20%20z-index%3A%20-1%3B%0A%7D%0A.foot%20%7B%0A%20%20height%3A%2040px%3B%0A%20%20width%3A%2040px%3B%0A%20%20background%3A%20%23ccc%3B%0A%20%20border-radius%3A%2040px%3B%0A%20%20border%3A%2015px%20solid%20%23999%3B%0A%20%20position%3A%20relative%3B%0A%20%20left%3A%20110px%3B%0A%20%20top%3A%20-10px%3B%0A%20%20z-index%3A%20-1%3B%0A%7D%0A%3C/style%3E%0A%3C/head%3E%0A%0A%3Cbody%3E%0A%0A%3Cdiv%20class%3D%22robot%22%3E%0A%20%20%3Cdiv%20class%3D%22beep%22%3E%3C/div%3E%0A%20%20%3Cdiv%20class%3D%22brain%22%3E%3C/div%3E%0A%20%20%3Cdiv%20class%3D%22torso%22%3E%0A%20%20%20%20%3Cdiv%20class%3D%22left%22%3Ej%3C/div%3E%0A%20%20%20%20%3Cdiv%20class%3D%22right%22%3Ej%3C/div%3E%0A%20%20%3C/div%3E%0A%20%20%3Cdiv%20class%3D%22foot%22%3E%3C/div%3E%0A%3C/div%3E%0A%0A%3Cbutton%20class%3D%22flash%22%3Elaser%20eyes%20on/off%3C/button%3E%0A%3Cbutton%20class%3D%22color%22%3Echange%20color%21%3C/button%3E%0A%3Cscript%3E%0A//%20When%20eyes%20button%20is%20clicked%2C%20toggle%20laser%20class%20on%20brain%0A%24%28%22.flash%22%29.click%28function%28%29%20%7B%0A%20%20%24%28%22.brain%22%29.toggleClass%28%27laser%27%29%3B%0A%7D%29%3B%0A%0A//%20When%20color%20button%20is%20clicked...%0A%24%28%22.color%22%29.click%28function%28%29%20%7B%0A%20%20//%20assign%20each%20named%20color%20a%20random%20number%200-255%0A%20%20var%20red%20%3D%20Math.floor%28Math.random%28%29%20*%20255%29%3B%0A%20%20var%20green%20%3D%20Math.floor%28Math.random%28%29%20*%20255%29%3B%0A%20%20var%20blue%20%3D%20Math.floor%28Math.random%28%29%20*%20255%29%3B%0A%20%20%0A%20%20//Display%20the%20three%20values%20in%20an%20alert%20window%0A%20%20alert%28red%20+%20%22%2C%22%20+%20green%20+%20%22%2C%22%20+%20blue%29%3B%0A%7D%29%3B%0A%3C/script%3E%0A%3C/body%3E","slug":"cotbots-4","freeform":false,"tumblr":false,"slides":[{"id":1694,"project_id":34,"image":{"url":"https://ga-dash.s3.amazonaws.com/production/uploads/slides/34/3744d43ec6d68f24eff0e01686904f51.jpg"},"sort_order":46,"created_at":"2013-12-13T19:24:39.031Z","updated_at":"2013-12-13T19:29:59.558Z","checkpoint":false},{"id":1645,"project_id":34,"image":{"url":"https://ga-dash.s3.amazonaws.com/production/uploads/slides/34/8b313b482c40a863e382a11165a0bbb0."},"sort_order":1,"created_at":"2013-12-12T00:50:20.937Z","updated_at":"2013-12-12T00:52:25.152Z","checkpoint":false},{"id":1646,"project_id":34,"image":{"url":"https://ga-dash.s3.amazonaws.com/production/uploads/slides/34/fe87afaf3f82d01bb8c3c2761ead9c9f."},"sort_order":2,"created_at":"2013-12-12T00:52:53.179Z","updated_at":"2013-12-12T00:52:25.159Z","checkpoint":false},{"id":1687,"project_id":34,"image":{"url":"https://ga-dash.s3.amazonaws.com/production/uploads/slides/34/1148e9c6c531c32a7e2ed581a0db6d46."},"sort_order":48,"created_at":"2013-12-12T00:53:09.858Z","updated_at":"2013-12-13T19:30:47.243Z","checkpoint":false},{"id":1661,"project_id":34,"image":{"url":"https://ga-dash.s3.amazonaws.com/production/uploads/slides/34/d8a4652d01f488cfc0bf10eafd8b8501."},"sort_order":3,"created_at":"2013-12-12T00:51:21.075Z","updated_at":"2013-12-12T00:52:25.165Z","checkpoint":false},{"id":1647,"project_id":34,"image":{"url":"https://ga-dash.s3.amazonaws.com/production/uploads/slides/34/c3744bffef1206e7063ad15d62e1b264."},"sort_order":7,"created_at":"2013-12-12T00:51:14.472Z","updated_at":"2013-12-12T00:52:25.189Z","checkpoint":false},{"id":1665,"project_id":34,"image":{"url":"https://ga-dash.s3.amazonaws.com/production/uploads/slides/34/d9297c978acf03e8e82202b72d05eca9."},"sort_order":22,"created_at":"2013-12-12T00:51:22.083Z","updated_at":"2013-12-12T23:35:01.354Z","checkpoint":false},{"id":1670,"project_id":34,"image":{"url":"https://ga-dash.s3.amazonaws.com/production/uploads/slides/34/5fe94b36efd6ccf3e799dc70a3dd099c."},"sort_order":29,"created_at":"2013-12-12T00:51:23.922Z","updated_at":"2013-12-12T23:35:01.377Z","checkpoint":true},{"id":1674,"project_id":34,"image":{"url":"https://ga-dash.s3.amazonaws.com/production/uploads/slides/34/fa013b6ae18a9fd4ad09a1c5fb4e7bde."},"sort_order":33,"created_at":"2013-12-12T00:51:25.253Z","updated_at":"2013-12-12T23:35:01.407Z","checkpoint":false},{"id":1678,"project_id":34,"image":{"url":"https://ga-dash.s3.amazonaws.com/production/uploads/slides/34/d1e0ee44bc07ee25d1dc0c48a5a05e7d."},"sort_order":37,"created_at":"2013-12-12T00:51:27.225Z","updated_at":"2013-12-12T23:35:01.429Z","checkpoint":false},{"id":1684,"project_id":34,"image":{"url":"https://ga-dash.s3.amazonaws.com/production/uploads/slides/34/0afa4adff5bddce67a2e6ba231b7d108."},"sort_order":41,"created_at":"2013-12-12T00:51:29.342Z","updated_at":"2013-12-12T23:35:01.459Z","checkpoint":true},{"id":1658,"project_id":34,"image":{"url":"https://ga-dash.s3.amazonaws.com/production/uploads/slides/34/9f83bd5f21c983d85ceb4250212efa99."},"sort_order":16,"created_at":"2013-12-12T00:51:23.713Z","updated_at":"2013-12-12T23:34:39.167Z","checkpoint":true},{"id":1666,"project_id":34,"image":{"url":"https://ga-dash.s3.amazonaws.com/production/uploads/slides/34/3ccc61d4e6de0aedaac52a626747fdad."},"sort_order":26,"created_at":"2013-12-12T00:51:26.448Z","updated_at":"2013-12-12T23:35:01.359Z","checkpoint":false},{"id":1676,"project_id":34,"image":{"url":"https://ga-dash.s3.amazonaws.com/production/uploads/slides/34/3f35f36b1e7f376fb9b13f40a566217c."},"sort_order":34,"created_at":"2013-12-12T00:51:30.011Z","updated_at":"2013-12-12T23:35:01.418Z","checkpoint":false},{"id":1648,"project_id":34,"image":{"url":"https://ga-dash.s3.amazonaws.com/production/uploads/slides/34/962d1524d4ace3aec9ccdb357fff67bd.jpg"},"sort_order":8,"created_at":"2013-12-12T00:51:18.952Z","updated_at":"2013-12-13T19:11:03.909Z","checkpoint":false},{"id":1649,"project_id":34,"image":{"url":"https://ga-dash.s3.amazonaws.com/production/uploads/slides/34/03dd199f13b78b00c6610135ddb5e3ec."},"sort_order":9,"created_at":"2013-12-12T00:50:23.157Z","updated_at":"2013-12-12T00:52:25.201Z","checkpoint":false},{"id":1651,"project_id":34,"image":{"url":"https://ga-dash.s3.amazonaws.com/production/uploads/slides/34/a3253e4f418ab7e1ec52dbc2aeabfd83.jpg"},"sort_order":11,"created_at":"2013-12-12T00:52:56.161Z","updated_at":"2013-12-12T23:31:52.497Z","checkpoint":false},{"id":1664,"project_id":34,"image":{"url":"https://ga-dash.s3.amazonaws.com/production/uploads/slides/34/4a1c7f7bbfd9b2d7ae6abfaffd6ba69f."},"sort_order":21,"created_at":"2013-12-12T00:53:01.101Z","updated_at":"2013-12-12T23:35:01.350Z","checkpoint":false},{"id":1673,"project_id":34,"image":{"url":"https://ga-dash.s3.amazonaws.com/production/uploads/slides/34/9bd6e77eb8d86ebe18a97a536121ae49."},"sort_order":31,"created_at":"2013-12-12T00:53:04.434Z","updated_at":"2013-12-12T23:35:01.401Z","checkpoint":true},{"id":1682,"project_id":34,"image":{"url":"https://ga-dash.s3.amazonaws.com/production/uploads/slides/34/638eb857f76cf9e5ee1bd41f6c7c7f97."},"sort_order":42,"created_at":"2013-12-12T00:53:07.890Z","updated_at":"2013-12-12T23:35:01.450Z","checkpoint":false},{"id":1652,"project_id":34,"image":{"url":"https://ga-dash.s3.amazonaws.com/production/uploads/slides/34/5043d77d1a3e781d1ec43b9f4eb89667."},"sort_order":13,"created_at":"2013-12-12T00:51:18.216Z","updated_at":"2013-12-12T00:52:25.226Z","checkpoint":false},{"id":1653,"project_id":34,"image":{"url":"https://ga-dash.s3.amazonaws.com/production/uploads/slides/34/4d1d02b5f6609fdc818c8a2950d4758f."},"sort_order":5,"created_at":"2013-12-12T00:50:26.363Z","updated_at":"2013-12-12T00:52:25.177Z","checkpoint":false},{"id":1657,"project_id":34,"image":{"url":"https://ga-dash.s3.amazonaws.com/production/uploads/slides/34/0bdba66b31181b52f0075fccb7e3c619."},"sort_order":17,"created_at":"2013-12-12T00:50:27.394Z","updated_at":"2013-12-12T23:35:01.330Z","checkpoint":false},{"id":1667,"project_id":34,"image":{"url":"https://ga-dash.s3.amazonaws.com/production/uploads/slides/34/b3d91f8f89bee8fb0bf04f7f0a10a1a7."},"sort_order":27,"created_at":"2013-12-12T00:50:30.287Z","updated_at":"2013-12-12T23:35:01.364Z","checkpoint":false},{"id":1671,"project_id":34,"image":{"url":"https://ga-dash.s3.amazonaws.com/production/uploads/slides/34/5e193554802a16454173b37ebebed025."},"sort_order":32,"created_at":"2013-12-12T00:50:31.941Z","updated_at":"2013-12-12T23:35:01.391Z","checkpoint":false},{"id":1675,"project_id":34,"image":{"url":"https://ga-dash.s3.amazonaws.com/production/uploads/slides/34/8ecdd6c25184d1f8c4eee9e8b605351c."},"sort_order":36,"created_at":"2013-12-12T00:50:33.387Z","updated_at":"2013-12-12T23:35:01.412Z","checkpoint":false},{"id":1654,"project_id":34,"image":{"url":"https://ga-dash.s3.amazonaws.com/production/uploads/slides/34/6c2e56eeb7bdcdc0c583fee201b1dad0."},"sort_order":6,"created_at":"2013-12-12T00:51:22.758Z","updated_at":"2013-12-12T00:52:25.183Z","checkpoint":false},{"id":1663,"project_id":34,"image":{"url":"https://ga-dash.s3.amazonaws.com/production/uploads/slides/34/0eaf49ea05a250e97a7ffaadeb5ea437."},"sort_order":18,"created_at":"2013-12-12T00:51:24.703Z","updated_at":"2013-12-12T23:35:01.345Z","checkpoint":false},{"id":1681,"project_id":34,"image":{"url":"https://ga-dash.s3.amazonaws.com/production/uploads/slides/34/3db30de906b71cf3eda8e27573a28938."},"sort_order":39,"created_at":"2013-12-12T00:51:31.517Z","updated_at":"2013-12-12T23:35:01.445Z","checkpoint":false},{"id":1689,"project_id":34,"image":{"url":"https://ga-dash.s3.amazonaws.com/production/uploads/slides/34/29876b5507463bf451b7cfc3969efce6.jpg"},"sort_order":23,"created_at":"2013-12-12T00:51:38.069Z","updated_at":"2013-12-13T20:02:17.222Z","checkpoint":false},{"id":1660,"project_id":34,"image":{"url":"https://ga-dash.s3.amazonaws.com/production/uploads/slides/34/3e289c1eff57c2fa4d89bb75b172cb15."},"sort_order":4,"created_at":"2013-12-12T00:53:00.206Z","updated_at":"2013-12-12T00:52:25.171Z","checkpoint":false},{"id":1655,"project_id":34,"image":{"url":"https://ga-dash.s3.amazonaws.com/production/uploads/slides/34/ea3afc721b748abb71e36d565a6e558d."},"sort_order":14,"created_at":"2013-12-12T00:52:58.467Z","updated_at":"2013-12-12T00:52:25.232Z","checkpoint":false},{"id":1659,"project_id":34,"image":{"url":"https://ga-dash.s3.amazonaws.com/production/uploads/slides/34/e64a1717d1b5c3ff9350f8ba82a61f21."},"sort_order":19,"created_at":"2013-12-12T00:51:20.791Z","updated_at":"2013-12-12T23:35:01.336Z","checkpoint":false},{"id":1668,"project_id":34,"image":{"url":"https://ga-dash.s3.amazonaws.com/production/uploads/slides/34/aaf5839ec16c467ede99713bbeef6b5c."},"sort_order":25,"created_at":"2013-12-12T00:51:23.615Z","updated_at":"2013-12-12T23:35:01.368Z","checkpoint":false},{"id":1672,"project_id":34,"image":{"url":"https://ga-dash.s3.amazonaws.com/production/uploads/slides/34/b8fffa9f0b77148888f3b9f0b8363744."},"sort_order":30,"created_at":"2013-12-12T00:51:24.966Z","updated_at":"2013-12-12T23:35:01.396Z","checkpoint":false},{"id":1680,"project_id":34,"image":{"url":"https://ga-dash.s3.amazonaws.com/production/uploads/slides/34/fa0fb5789d0f4e54caf9601adf6d7fac."},"sort_order":40,"created_at":"2013-12-12T00:51:27.847Z","updated_at":"2013-12-12T23:35:01.440Z","checkpoint":false},{"id":1685,"project_id":34,"image":{"url":"https://ga-dash.s3.amazonaws.com/production/uploads/slides/34/2c9dc6a7db79743f0f6b4439a5d386f6."},"sort_order":45,"created_at":"2013-12-12T00:51:29.767Z","updated_at":"2013-12-12T23:35:01.463Z","checkpoint":false},{"id":1688,"project_id":34,"image":{"url":"https://ga-dash.s3.amazonaws.com/production/uploads/slides/34/71668e6b3e7b910dc69c1acbf5c681d2."},"sort_order":47,"created_at":"2013-12-12T00:51:30.845Z","updated_at":"2013-12-13T19:30:22.051Z","checkpoint":false},{"id":1690,"project_id":34,"image":{"url":"https://ga-dash.s3.amazonaws.com/production/uploads/slides/34/dd87ef6d3b6ef8e2b750cfda9df361c0."},"sort_order":12,"created_at":"2013-12-12T00:50:45.034Z","updated_at":"2013-12-12T23:01:34.514Z","checkpoint":true},{"id":1650,"project_id":34,"image":{"url":"https://ga-dash.s3.amazonaws.com/production/uploads/slides/34/4777a397d8167fe23ee83390c8a5c97a.jpg"},"sort_order":10,"created_at":"2013-12-12T00:51:16.514Z","updated_at":"2013-12-12T23:31:37.064Z","checkpoint":false},{"id":1662,"project_id":34,"image":{"url":"https://ga-dash.s3.amazonaws.com/production/uploads/slides/34/41d9184488ae712495c17e00f22a84d3."},"sort_order":20,"created_at":"2013-12-12T00:50:28.385Z","updated_at":"2013-12-12T23:35:01.340Z","checkpoint":false},{"id":1679,"project_id":34,"image":{"url":"https://ga-dash.s3.amazonaws.com/production/uploads/slides/34/c72db9c155b928e6599fbecd150afe01."},"sort_order":38,"created_at":"2013-12-12T00:50:34.851Z","updated_at":"2013-12-12T23:35:01.434Z","checkpoint":true},{"id":1683,"project_id":34,"image":{"url":"https://ga-dash.s3.amazonaws.com/production/uploads/slides/34/5d4717e817c961c0809a6ab651f13dfe.jpg"},"sort_order":43,"created_at":"2013-12-12T00:50:36.156Z","updated_at":"2013-12-13T20:04:22.450Z","checkpoint":false},{"id":1669,"project_id":34,"image":{"url":"https://ga-dash.s3.amazonaws.com/production/uploads/slides/34/f1b4ff14675589f097d33dfbb6fdb8fe."},"sort_order":28,"created_at":"2013-12-12T00:53:03.117Z","updated_at":"2013-12-12T23:35:01.373Z","checkpoint":false},{"id":1677,"project_id":34,"image":{"url":"https://ga-dash.s3.amazonaws.com/production/uploads/slides/34/79eb10e8051d728916380aa9fad8cc29."},"sort_order":35,"created_at":"2013-12-12T00:53:05.715Z","updated_at":"2013-12-12T23:35:01.423Z","checkpoint":true},{"id":1691,"project_id":34,"image":{"url":"https://ga-dash.s3.amazonaws.com/production/uploads/slides/34/a27bacb553c5ffb0f5224efa7214911e."},"sort_order":24,"created_at":"2013-12-12T00:53:17.169Z","updated_at":"2013-12-12T23:35:01.487Z","checkpoint":true},{"id":1686,"project_id":34,"image":{"url":"https://ga-dash.s3.amazonaws.com/production/uploads/slides/34/b4076022acfaa544fa63f0824684f1e2."},"sort_order":44,"created_at":"2013-12-12T00:51:33.409Z","updated_at":"2013-12-12T23:35:01.468Z","checkpoint":true},{"id":1692,"project_id":34,"image":{"url":"https://ga-dash.s3.amazonaws.com/production/uploads/slides/34/86ee429d9c448d4c0133918c66019f9e.jpg"},"sort_order":15,"created_at":"2013-12-12T23:34:38.989Z","updated_at":"2013-12-13T19:23:32.060Z","checkpoint":false}],"tasks":[{"id":400,"slide_id":1684,"regex":"/\u003c/button\u003e[\\sa-z\u003c\u003e\"=\\/\\!]*\u003c/button\u003e[\\sa-z\u003c\u003e\"=\\/\\!_\\.]*\u003cbutton[\\sa-z\"=]*\u003e[\\sa-z\\/!]*\u003c\\/button\u003e/i","prompt":"Create a third button after the color changer, and give it a useful label (like break/dance)","created_at":"2013-12-12T23:08:22.212Z","updated_at":"2013-12-12T23:08:22.212Z","project_id":34,"sort_order":0},{"id":401,"slide_id":1684,"regex":"/\u003c/button\u003e[\\sa-z\u003c\u003e\"=\\/\\!]*\u003c/button\u003e[\\sa-z\u003c\u003e\"=\\/\\!_\\.]*\u003cbutton class=\"moves\"\u003e[\\sa-z\\/!]*\u003c\\/button\u003e/i","prompt":"Give it the class name \"moves\"","created_at":"2013-12-12T23:08:22.266Z","updated_at":"2013-12-12T23:08:22.266Z","project_id":34,"sort_order":1},{"id":402,"slide_id":1686,"regex":"/\u003cscript\u003e[\\s0-9a-z\\/\\$\\-\\(\\){}\"'*+=;,.]*\\$\\((\".moves\"|'.moves')\\)\\.click\\(function\\(\\)[\\s]*{[\\s]*\\$\\((\"img\"|'img')\\)\\.toggle\\(\\);[\\s]*}\\);[\\s0-9a-z\\/\\$\\-\\(\\){}\"'*+=;,.]*\u003c\\/script\u003e/i","prompt":"Copy out the JQuery script from the previous slide to toggle the image","created_at":"2013-12-12T23:11:19.088Z","updated_at":"2013-12-12T23:11:19.088Z","project_id":34,"sort_order":null},{"id":389,"slide_id":1691,"regex":"/\u003cscript\u003e[\\s]*[\\s0-9a-z\\/\\$\\-\\(\\){}\"'*+=;,.]*\\/\\/[\\s]...[\\s0-9a-z\\/\\$\\-\\(\\){}\"'*+=;,.]*\u003c\\/script\u003e/i","prompt":"Include helpful comments that explain what your script does","created_at":"2013-12-12T23:03:41.132Z","updated_at":"2013-12-13T19:57:13.276Z","project_id":34,"sort_order":1},{"id":387,"slide_id":1691,"regex":"/\u003cscript\u003e[\\s]*[\\s0-9a-z\\/\\$\\-\\(\\){}\"'*+=;,\\.]*\\$\\(('body'|\"body\")\\)\\.css\\((\"background\"|'background'),[\\s]*randomRGBA\\);[\\s0-9a-z\\/\\$\\-\\(\\){}\"'*+=;,.]*\u003c\\/script\u003e/i","prompt":"Write a css function that changes the body’s background to a randomRGBA color when you hit the color button","created_at":"2013-12-12T23:03:33.800Z","updated_at":"2013-12-13T00:56:55.303Z","project_id":34,"sort_order":0},{"id":386,"slide_id":1658,"regex":"/\u003cscript\u003e[\\s]*[\\s0-9a-z\\/\\$\\-\\(\\){}\"'*+=;,.]*\\/\\/[\\s]*alert\\(randomRGBA\\);[\\s0-9a-z\\/\\$\\-\\(\\){}\"'*+=;,.]*\u003c\\/script\u003e/i","prompt":"Alerts can annoy users. Comment out your alerts, using the JavaScript comment style!","created_at":"2013-12-12T23:04:38.790Z","updated_at":"2013-12-12T23:33:36.753Z","project_id":34,"sort_order":null},{"id":391,"slide_id":1673,"regex":"/img[\\s]*{[\\s0-9a-z:;]*position:[\\s]*absolute;[\\s0-9a-z:;]*}/i","prompt":"Make the image’s position absolute, so it won’t mess with other positioned things on the page","created_at":"2013-12-12T23:04:50.169Z","updated_at":"2013-12-12T23:04:50.169Z","project_id":34,"sort_order":0},{"id":392,"slide_id":1673,"regex":"/img[\\s]*{[\\s0-9a-z:;]*top:[\\s]*200px;[\\s0-9a-z:;]*}/i","prompt":"Set the image’s top value to 200px","created_at":"2013-12-12T23:06:03.148Z","updated_at":"2013-12-12T23:06:03.148Z","project_id":34,"sort_order":1},{"id":393,"slide_id":1673,"regex":"/img[\\s]*{[\\s0-9a-z:;]*left:[\\s]*400px;[\\s0-9a-z:;]*}/i","prompt":"Give the image a left value of 400px","created_at":"2013-12-12T23:08:01.606Z","updated_at":"2013-12-12T23:08:01.606Z","project_id":34,"sort_order":2},{"id":394,"slide_id":1677,"regex":"/@keyframes dance[\\s]*{[\\s]*from[\\s]*{[\\s]*left:[\\s]*800px;[\\s]*}[\\s]*}/i","prompt":"Write the @keyframes dance animation from the last slide ABOVE the img style","created_at":"2013-12-12T23:06:50.224Z","updated_at":"2013-12-12T23:06:50.224Z","project_id":34,"sort_order":0},{"id":395,"slide_id":1677,"regex":"/@-webkit-keyframes dance[\\s]*{[\\s]*from[\\s]*{[\\s]*left:[\\s]*800px;[\\s]*}[\\s]*}/i","prompt":"Include an @webkit-keyframes animation with the same values","created_at":"2013-12-12T23:07:27.329Z","updated_at":"2013-12-12T23:07:27.329Z","project_id":34,"sort_order":1},{"id":396,"slide_id":1677,"regex":"/@-moz-keyframes dance[\\s]*{[\\s]*from[\\s]*{[\\s]*left:[\\s]*800px;[\\s]*}[\\s]*}/i","prompt":"You’ll need an @moz-keyframes version, too!","created_at":"2013-12-12T23:07:27.333Z","updated_at":"2013-12-12T23:07:27.333Z","project_id":34,"sort_order":2},{"id":397,"slide_id":1679,"regex":"/img[\\s]*{[\\s]*animation:[\\s]*dance 4s infinite;[\\s0-9a-z:;/-]*}/i","prompt":"Tell the img style to run the animation script for four seconds, and on an infinite loop ","created_at":"2013-12-12T23:06:58.373Z","updated_at":"2013-12-12T23:06:58.373Z","project_id":34,"sort_order":0},{"id":398,"slide_id":1679,"regex":"/img[\\s]*{[\\s0-9a-z:;/-]*-webkit-animation:[\\s]*dance 4s infinite;[\\s0-9a-z:;/-]*}/i","prompt":"Include an @webkit-keyframes animation with the same values","created_at":"2013-12-12T23:08:38.523Z","updated_at":"2013-12-12T23:08:38.523Z","project_id":34,"sort_order":1},{"id":399,"slide_id":1679,"regex":"/img[\\s]*{[\\s0-9a-z:;/-]*-moz-animation:[\\s]*dance 4s infinite;[\\s0-9a-z:;/-]*}/i","prompt":"You’ll need an @moz-keyframes version, too!","created_at":"2013-12-12T23:08:38.528Z","updated_at":"2013-12-12T23:08:38.528Z","project_id":34,"sort_order":1},{"id":390,"slide_id":1670,"regex":"/\u003c\\/button\u003e[\\s]*\u003cimg src=\"\\/assets\\/dance_cotter\\.gif\"\u003e/i","prompt":"Add the animated gif of Cotter dancing","created_at":"2013-12-12T23:06:58.344Z","updated_at":"2013-12-13T01:07:59.642Z","project_id":34,"sort_order":null},{"id":385,"slide_id":1690,"regex":"/\u003cscript\u003e[\\s]*[^]*\\/\\/[^]*\\/\\/[^]*\\/\\/[\\s]...[^]*\\/\\/[\\s]...[^]*\u003c\\/script\u003e/i","prompt":"Include helpful comments that explain what your script does","created_at":"2013-12-12T23:02:29.322Z","updated_at":"2014-07-08T20:04:51.525Z","project_id":34,"sort_order":2},{"id":383,"slide_id":1690,"regex":"/\u003cscript\u003e[\\s]*[^]*var randomRGBA[\\s]*=[\\s]*'rgba\\('\\+[\\s]*red[\\s]*\\+',[\\s]*'\\+[\\s]*green[\\s]*\\+',[\\s]*'[\\s]*\\+[\\s]*blue[\\s]*\\+',[\\s]*1\\)';[^]*\u003c\\/script\u003e/i","prompt":"Copy out the variable that generates a randomRGBA value when the color button is clicked","created_at":"2013-12-12T23:01:34.520Z","updated_at":"2014-07-08T20:04:51.224Z","project_id":34,"sort_order":0},{"id":384,"slide_id":1690,"regex":"/\u003cscript\u003e[\\s]*[^]*alert\\(randomRGBA\\);[^]*\u003c\\/script\u003e/i","prompt":"Write alert(randomRGBA)","created_at":"2013-12-12T23:03:41.006Z","updated_at":"2014-07-08T20:04:51.520Z","project_id":34,"sort_order":1}],"skills":[{"id":144,"task_id":402,"name":"toggle","category":"javascript","description":"The JQuery toggle function lets you turn an HTML element visible or invisible. It affects all instances of the element, so if you have a lot of paragraphs or pictures and only want to toggle one, give that one a class name and toggle the class.","example":"hello","created_at":"2013-12-13T23:48:39.977Z","updated_at":"2013-12-14T00:01:23.423Z","formatted_example":"\u003cdiv class=\"CodeRay\"\u003e\n  \u003cdiv class=\"code\"\u003e\u003cpre\u003ehello\u003c/pre\u003e\u003c/div\u003e\n\u003c/div\u003e\n","tumblr":false},{"id":142,"task_id":387,"name":"css function","category":"javascript","description":"The css function in JQuery can be used in two ways. If you give it one value it \"returns\" a CSS property (basically, it finds it for you), and if you give it two values it “sets” a CSS property (changes the property before the comma to the value specified after the comma).","example":" $(\"body\").css(\"background\");\\n\\talert(\"background\");\\n\\n $(\"body\").css(\"background\", \"white\");","created_at":"2013-12-13T22:47:43.309Z","updated_at":"2013-12-13T23:39:06.229Z","formatted_example":"\u003cdiv class=\"CodeRay\"\u003e\n  \u003cdiv class=\"code\"\u003e\u003cpre\u003e \u003cspan class=\"predefined\"\u003e$\u003c/span\u003e(\u003cspan class=\"string\"\u003e\u003cspan class=\"delimiter\"\u003e\u0026quot;\u003c/span\u003e\u003cspan class=\"content\"\u003ebody\u003c/span\u003e\u003cspan class=\"delimiter\"\u003e\u0026quot;\u003c/span\u003e\u003c/span\u003e).css(\u003cspan class=\"string\"\u003e\u003cspan class=\"delimiter\"\u003e\u0026quot;\u003c/span\u003e\u003cspan class=\"content\"\u003ebackground\u003c/span\u003e\u003cspan class=\"delimiter\"\u003e\u0026quot;\u003c/span\u003e\u003c/span\u003e);\u003cbr\u003e\u0026nbsp;\u0026nbsp;\u0026nbsp;alert(\u003cspan class=\"string\"\u003e\u003cspan class=\"delimiter\"\u003e\u0026quot;\u003c/span\u003e\u003cspan class=\"content\"\u003ebackground\u003c/span\u003e\u003cspan class=\"delimiter\"\u003e\u0026quot;\u003c/span\u003e\u003c/span\u003e);\u003cbr\u003e\u003cbr\u003e \u003cspan class=\"predefined\"\u003e$\u003c/span\u003e(\u003cspan class=\"string\"\u003e\u003cspan class=\"delimiter\"\u003e\u0026quot;\u003c/span\u003e\u003cspan class=\"content\"\u003ebody\u003c/span\u003e\u003cspan class=\"delimiter\"\u003e\u0026quot;\u003c/span\u003e\u003c/span\u003e).css(\u003cspan class=\"string\"\u003e\u003cspan class=\"delimiter\"\u003e\u0026quot;\u003c/span\u003e\u003cspan class=\"content\"\u003ebackground\u003c/span\u003e\u003cspan class=\"delimiter\"\u003e\u0026quot;\u003c/span\u003e\u003c/span\u003e, \u003cspan class=\"string\"\u003e\u003cspan class=\"delimiter\"\u003e\u0026quot;\u003c/span\u003e\u003cspan class=\"content\"\u003ewhite\u003c/span\u003e\u003cspan class=\"delimiter\"\u003e\u0026quot;\u003c/span\u003e\u003c/span\u003e);\u003c/pre\u003e\u003c/div\u003e\n\u003c/div\u003e\n","tumblr":false},{"id":141,"task_id":383,"name":"strings","category":"javascript","description":"A string is just a bunch of text, and is also one of six value types in Javascript. Strings can hold any character, including spaces, and are super-easy to spot because they’re always inside single or double quotation marks. You can put single or double quotation marks inside strings if you “escape” them with a backslash.","example":" var string = \"hello, I\\'m a string!\"\\n var me_too = 'I\\'m also a string.'","created_at":"2013-12-13T22:46:56.813Z","updated_at":"2013-12-13T23:40:21.091Z","formatted_example":"\u003cdiv class=\"CodeRay\"\u003e\n  \u003cdiv class=\"code\"\u003e\u003cpre\u003e \u003cspan class=\"keyword\"\u003evar\u003c/span\u003e string = \u003cspan class=\"string\"\u003e\u003cspan class=\"delimiter\"\u003e\u0026quot;\u003c/span\u003e\u003cspan class=\"content\"\u003ehello, I\u003c/span\u003e\u003cspan class=\"char\"\u003e\\'\u003c/span\u003e\u003cspan class=\"content\"\u003em a string!\u003c/span\u003e\u003cspan class=\"delimiter\"\u003e\u0026quot;\u003c/span\u003e\u003c/span\u003e\u003cbr\u003e \u003cspan class=\"keyword\"\u003evar\u003c/span\u003e me_too = \u003cspan class=\"string\"\u003e\u003cspan class=\"delimiter\"\u003e'\u003c/span\u003e\u003cspan class=\"content\"\u003eI\u003c/span\u003e\u003cspan class=\"char\"\u003e\\'\u003c/span\u003e\u003cspan class=\"content\"\u003em also a string.\u003c/span\u003e\u003cspan class=\"delimiter\"\u003e'\u003c/span\u003e\u003c/span\u003e\u003c/pre\u003e\u003c/div\u003e\n\u003c/div\u003e\n","tumblr":false}]},"nextProjectSlug":"mad-libs-1","currentUserId":"726454","currentSlideId":1687,"userTasks":[{"id":16766634,"user_id":726454,"task_id":63,"completed":true,"created_at":"2020-12-16T04:22:20.464Z","updated_at":"2020-12-16T04:22:20.464Z"},{"id":16766639,"user_id":726454,"task_id":66,"completed":true,"created_at":"2020-12-16T04:25:03.040Z","updated_at":"2020-12-16T04:25:03.040Z"},{"id":16766642,"user_id":726454,"task_id":67,"completed":true,"created_at":"2020-12-16T04:25:59.667Z","updated_at":"2020-12-16T04:25:59.667Z"},{"id":16766648,"user_id":726454,"task_id":68,"completed":true,"created_at":"2020-12-16T04:29:52.549Z","updated_at":"2020-12-16T04:29:52.549Z"},{"id":16766650,"user_id":726454,"task_id":69,"completed":true,"created_at":"2020-12-16T04:31:24.058Z","updated_at":"2020-12-16T04:31:24.058Z"},{"id":16766655,"user_id":726454,"task_id":73,"completed":true,"created_at":"2020-12-16T04:37:18.066Z","updated_at":"2020-12-16T04:37:18.066Z"},{"id":16766658,"user_id":726454,"task_id":74,"completed":true,"created_at":"2020-12-16T04:38:01.788Z","updated_at":"2020-12-16T04:38:01.788Z"},{"id":16766723,"user_id":726454,"task_id":80,"completed":true,"created_at":"2020-12-16T05:15:31.673Z","updated_at":"2020-12-16T05:15:31.673Z"},{"id":16766739,"user_id":726454,"task_id":82,"completed":true,"created_at":"2020-12-16T05:22:36.956Z","updated_at":"2020-12-16T05:22:36.956Z"},{"id":16766742,"user_id":726454,"task_id":84,"completed":true,"created_at":"2020-12-16T05:26:15.059Z","updated_at":"2020-12-16T05:26:15.059Z"},{"id":16766744,"user_id":726454,"task_id":88,"completed":true,"created_at":"2020-12-16T05:27:30.318Z","updated_at":"2020-12-16T05:27:30.318Z"},{"id":16766745,"user_id":726454,"task_id":89,"completed":true,"created_at":"2020-12-16T05:28:05.582Z","updated_at":"2020-12-16T05:28:05.582Z"},{"id":16766748,"user_id":726454,"task_id":90,"completed":true,"created_at":"2020-12-16T05:30:00.036Z","updated_at":"2020-12-16T05:30:00.036Z"},{"id":16766756,"user_id":726454,"task_id":94,"completed":true,"created_at":"2020-12-16T05:37:01.754Z","updated_at":"2020-12-16T05:37:01.754Z"},{"id":16766757,"user_id":726454,"task_id":95,"completed":true,"created_at":"2020-12-16T05:37:58.325Z","updated_at":"2020-12-16T05:37:58.325Z"},{"id":16766763,"user_id":726454,"task_id":96,"completed":true,"created_at":"2020-12-16T05:40:30.043Z","updated_at":"2020-12-16T05:40:30.043Z"},{"id":16766766,"user_id":726454,"task_id":97,"completed":true,"created_at":"2020-12-16T05:41:19.735Z","updated_at":"2020-12-16T05:41:19.735Z"},{"id":16766769,"user_id":726454,"task_id":98,"completed":true,"created_at":"2020-12-16T05:43:52.808Z","updated_at":"2020-12-16T05:43:52.808Z"},{"id":16766774,"user_id":726454,"task_id":99,"completed":true,"created_at":"2020-12-16T05:46:19.955Z","updated_at":"2020-12-16T05:46:19.955Z"},{"id":16766945,"user_id":726454,"task_id":142,"completed":true,"created_at":"2020-12-16T08:51:41.527Z","updated_at":"2020-12-16T08:51:41.527Z"},{"id":16766944,"user_id":726454,"task_id":143,"completed":true,"created_at":"2020-12-16T08:51:41.516Z","updated_at":"2020-12-16T08:51:41.516Z"},{"id":16766954,"user_id":726454,"task_id":148,"completed":true,"created_at":"2020-12-16T09:09:08.384Z","updated_at":"2020-12-16T09:09:08.384Z"},{"id":16766953,"user_id":726454,"task_id":150,"completed":true,"created_at":"2020-12-16T09:09:08.386Z","updated_at":"2020-12-16T09:09:08.386Z"},{"id":16766978,"user_id":726454,"task_id":157,"completed":true,"created_at":"2020-12-16T09:26:11.417Z","updated_at":"2020-12-16T09:26:11.417Z"},{"id":16766979,"user_id":726454,"task_id":158,"completed":true,"created_at":"2020-12-16T09:26:31.474Z","updated_at":"2020-12-16T09:26:31.474Z"},{"id":16766977,"user_id":726454,"task_id":159,"completed":true,"created_at":"2020-12-16T09:26:11.387Z","updated_at":"2020-12-16T09:26:11.387Z"},{"id":16766981,"user_id":726454,"task_id":164,"completed":true,"created_at":"2020-12-16T09:29:40.404Z","updated_at":"2020-12-16T09:29:40.404Z"},{"id":16766982,"user_id":726454,"task_id":165,"completed":true,"created_at":"2020-12-16T09:31:07.871Z","updated_at":"2020-12-16T09:31:07.871Z"},{"id":16089582,"user_id":726454,"task_id":178,"completed":true,"created_at":"2020-05-05T08:17:53.190Z","updated_at":"2020-05-05T08:17:53.190Z"},{"id":16089585,"user_id":726454,"task_id":179,"completed":true,"created_at":"2020-05-05T08:19:02.324Z","updated_at":"2020-05-05T08:19:02.324Z"},{"id":16089588,"user_id":726454,"task_id":180,"completed":true,"created_at":"2020-05-05T08:19:51.650Z","updated_at":"2020-05-05T08:19:51.650Z"},{"id":16089589,"user_id":726454,"task_id":181,"completed":true,"created_at":"2020-05-05T08:20:40.630Z","updated_at":"2020-05-05T08:20:40.630Z"},{"id":16089590,"user_id":726454,"task_id":182,"completed":true,"created_at":"2020-05-05T08:21:13.124Z","updated_at":"2020-05-05T08:21:13.124Z"},{"id":16089591,"user_id":726454,"task_id":183,"completed":true,"created_at":"2020-05-05T08:22:35.248Z","updated_at":"2020-05-05T08:22:35.248Z"},{"id":16089593,"user_id":726454,"task_id":184,"completed":true,"created_at":"2020-05-05T08:24:19.551Z","updated_at":"2020-05-05T08:24:19.551Z"},{"id":16089596,"user_id":726454,"task_id":185,"completed":true,"created_at":"2020-05-05T08:25:06.425Z","updated_at":"2020-05-05T08:25:06.425Z"},{"id":16089599,"user_id":726454,"task_id":187,"completed":true,"created_at":"2020-05-05T08:26:22.141Z","updated_at":"2020-05-05T08:26:22.141Z"},{"id":16089600,"user_id":726454,"task_id":188,"completed":true,"created_at":"2020-05-05T08:26:52.317Z","updated_at":"2020-05-05T08:26:52.317Z"},{"id":16089606,"user_id":726454,"task_id":190,"completed":true,"created_at":"2020-05-05T08:29:04.161Z","updated_at":"2020-05-05T08:29:04.161Z"},{"id":16089607,"user_id":726454,"task_id":191,"completed":true,"created_at":"2020-05-05T08:29:26.546Z","updated_at":"2020-05-05T08:29:26.546Z"},{"id":16089609,"user_id":726454,"task_id":192,"completed":true,"created_at":"2020-05-05T08:29:47.367Z","updated_at":"2020-05-05T08:29:47.367Z"},{"id":16089612,"user_id":726454,"task_id":193,"completed":true,"created_at":"2020-05-05T08:31:38.721Z","updated_at":"2020-05-05T08:31:38.721Z"},{"id":16089616,"user_id":726454,"task_id":195,"completed":true,"created_at":"2020-05-05T08:34:39.118Z","updated_at":"2020-05-05T08:34:39.118Z"},{"id":16089617,"user_id":726454,"task_id":196,"completed":true,"created_at":"2020-05-05T08:35:14.728Z","updated_at":"2020-05-05T08:35:14.728Z"},{"id":16089619,"user_id":726454,"task_id":197,"completed":true,"created_at":"2020-05-05T08:36:16.251Z","updated_at":"2020-05-05T08:36:16.251Z"},{"id":16089625,"user_id":726454,"task_id":198,"completed":true,"created_at":"2020-05-05T08:36:58.690Z","updated_at":"2020-05-05T08:36:58.690Z"},{"id":16089627,"user_id":726454,"task_id":199,"completed":true,"created_at":"2020-05-05T08:37:21.037Z","updated_at":"2020-05-05T08:37:21.037Z"},{"id":16089633,"user_id":726454,"task_id":201,"completed":true,"created_at":"2020-05-05T08:39:45.797Z","updated_at":"2020-05-05T08:39:45.797Z"},{"id":16766991,"user_id":726454,"task_id":205,"completed":true,"created_at":"2020-12-16T09:43:02.032Z","updated_at":"2020-12-16T09:43:02.032Z"},{"id":16766993,"user_id":726454,"task_id":209,"completed":true,"created_at":"2020-12-16T09:44:22.116Z","updated_at":"2020-12-16T09:44:22.116Z"},{"id":16767001,"user_id":726454,"task_id":210,"completed":true,"created_at":"2020-12-16T09:48:54.845Z","updated_at":"2020-12-16T09:48:54.845Z"},{"id":16766990,"user_id":726454,"task_id":231,"completed":true,"created_at":"2020-12-16T09:42:45.310Z","updated_at":"2020-12-16T09:42:45.310Z"},{"id":16767045,"user_id":726454,"task_id":245,"completed":true,"created_at":"2020-12-16T10:28:52.356Z","updated_at":"2020-12-16T10:28:52.356Z"},{"id":16767069,"user_id":726454,"task_id":255,"completed":true,"created_at":"2020-12-16T10:42:49.353Z","updated_at":"2020-12-16T10:42:49.353Z"},{"id":16773163,"user_id":726454,"task_id":279,"completed":true,"created_at":"2020-12-19T02:22:42.309Z","updated_at":"2020-12-19T02:22:42.309Z"},{"id":16773173,"user_id":726454,"task_id":294,"completed":true,"created_at":"2020-12-19T02:44:37.143Z","updated_at":"2020-12-19T02:44:37.143Z"},{"id":16773174,"user_id":726454,"task_id":301,"completed":true,"created_at":"2020-12-19T02:46:54.732Z","updated_at":"2020-12-19T02:46:54.732Z"},{"id":16773175,"user_id":726454,"task_id":302,"completed":true,"created_at":"2020-12-19T02:47:53.947Z","updated_at":"2020-12-19T02:47:53.947Z"},{"id":16773190,"user_id":726454,"task_id":310,"completed":true,"created_at":"2020-12-19T03:07:01.375Z","updated_at":"2020-12-19T03:07:01.375Z"},{"id":16773192,"user_id":726454,"task_id":312,"completed":true,"created_at":"2020-12-19T03:09:46.765Z","updated_at":"2020-12-19T03:09:46.765Z"},{"id":16773199,"user_id":726454,"task_id":322,"completed":true,"created_at":"2020-12-19T03:22:09.737Z","updated_at":"2020-12-19T03:22:09.737Z"},{"id":16773204,"user_id":726454,"task_id":328,"completed":true,"created_at":"2020-12-19T03:28:43.242Z","updated_at":"2020-12-19T03:28:43.242Z"},{"id":16773203,"user_id":726454,"task_id":329,"completed":true,"created_at":"2020-12-19T03:27:23.372Z","updated_at":"2020-12-19T03:27:23.372Z"},{"id":16767063,"user_id":726454,"task_id":336,"completed":true,"created_at":"2020-12-16T10:37:29.868Z","updated_at":"2020-12-16T10:37:29.868Z"},{"id":16773237,"user_id":726454,"task_id":369,"completed":true,"created_at":"2020-12-19T04:03:19.761Z","updated_at":"2020-12-19T04:03:19.761Z"},{"id":16773244,"user_id":726454,"task_id":372,"completed":true,"created_at":"2020-12-19T04:09:08.317Z","updated_at":"2020-12-19T04:09:08.317Z"},{"id":16773250,"user_id":726454,"task_id":375,"completed":true,"created_at":"2020-12-19T04:11:58.463Z","updated_at":"2020-12-19T04:11:58.463Z"},{"id":16773251,"user_id":726454,"task_id":376,"completed":true,"created_at":"2020-12-19T04:11:58.472Z","updated_at":"2020-12-19T04:11:58.472Z"},{"id":16773252,"user_id":726454,"task_id":377,"completed":true,"created_at":"2020-12-19T04:11:58.487Z","updated_at":"2020-12-19T04:11:58.487Z"},{"id":16773235,"user_id":726454,"task_id":381,"completed":true,"created_at":"2020-12-19T03:58:58.381Z","updated_at":"2020-12-19T03:58:58.381Z"},{"id":16773284,"user_id":726454,"task_id":383,"completed":true,"created_at":"2020-12-19T04:46:51.958Z","updated_at":"2020-12-19T04:46:51.958Z"},{"id":16773292,"user_id":726454,"task_id":387,"completed":true,"created_at":"2020-12-19T04:50:11.588Z","updated_at":"2020-12-19T04:50:11.588Z"},{"id":16773306,"user_id":726454,"task_id":402,"completed":true,"created_at":"2020-12-19T05:00:21.446Z","updated_at":"2020-12-19T05:00:21.446Z"},{"id":16773507,"user_id":726454,"task_id":403,"completed":true,"created_at":"2020-12-19T08:11:57.985Z","updated_at":"2020-12-19T08:11:57.985Z"},{"id":16773508,"user_id":726454,"task_id":404,"completed":true,"created_at":"2020-12-19T08:12:39.015Z","updated_at":"2020-12-19T08:12:39.015Z"},{"id":16773510,"user_id":726454,"task_id":411,"completed":true,"created_at":"2020-12-19T08:17:11.501Z","updated_at":"2020-12-19T08:17:11.501Z"},{"id":16773515,"user_id":726454,"task_id":424,"completed":true,"created_at":"2020-12-19T08:29:44.307Z","updated_at":"2020-12-19T08:29:44.307Z"},{"id":16773516,"user_id":726454,"task_id":426,"completed":true,"created_at":"2020-12-19T08:30:20.523Z","updated_at":"2020-12-19T08:30:20.523Z"},{"id":16773635,"user_id":726454,"task_id":501,"completed":true,"created_at":"2020-12-19T10:50:45.326Z","updated_at":"2020-12-19T10:50:45.326Z"},{"id":16773645,"user_id":726454,"task_id":502,"completed":true,"created_at":"2020-12-19T11:08:29.905Z","updated_at":"2020-12-19T11:08:29.905Z"},{"id":16773646,"user_id":726454,"task_id":503,"completed":true,"created_at":"2020-12-19T11:08:29.906Z","updated_at":"2020-12-19T11:08:29.906Z"},{"id":16774304,"user_id":726454,"task_id":508,"completed":true,"created_at":"2020-12-19T22:27:32.675Z","updated_at":"2020-12-19T22:27:32.675Z"}],"userProjectCode":"%3C%21DOCTYPE%20html%3E%0A%0A%3Chead%3E%0A%3Clink%20href%3D%27https%3A//fonts.googleapis.com/css%3Ffamily%3DPoller+One%27%20rel%3D%27stylesheet%27%20type%3D%27text/css%27%3E%0A%3Cscript%20src%3D%22/assets/jquery.js%22%3E%3C/script%3E%0A%3Cstyle%3E%0A%0A.robot%20%7B%0A%20%20position%3A%20relative%3B%0A%20%20left%3A%20200px%3B%0A%7D%0A%0A.beep%20%7B%0A%20%20width%3A%205px%3B%0A%20%20height%3A%200%3B%0A%20%20border%3A%205px%20solid%20transparent%3B%0A%20%20border-top%3A%2010px%20solid%20%23777%3B%0A%20%20border-bottom%3A%2080px%20solid%20%23888%3B%0A%20%20position%3A%20relative%3B%0A%20%20left%3A%20140px%3B%0A%7D%0A%0A@keyframes%20blink%20%7B%0A%20%2050%25%20%7B%0A%20%20%20%20background%3A%20radial-gradient%28circle%2C%20red%2015%25%2C%20transparent%2040%25%29%2C%20%23cc5%3B%0A%20%20%20%20background-size%3A%2075px%20150px%3B%0A%20%20%7D%0A%7D%0A@-webkit-keyframes%20blink%20%7B%0A%20%2050%25%20%7B%0A%20%20%20%20background%3A%20-webkit-radial-gradient%28circle%2C%20red%2015%25%2C%20transparent%2040%25%29%2C%20%23cc5%3B%0A%20%20%20%20background-size%3A%2075px%20150px%3B%0A%20%20%7D%0A%7D%0A@-moz-keyframes%20blink%20%7B%0A%20%2050%25%20%7B%0A%20%20%20%20background%3A%20-moz-radial-gradient%28circle%2C%20red%2015%25%2C%20transparent%2040%25%29%2C%20%23cc5%3B%0A%20%20%20%20background-size%3A%2075px%20150px%3B%0A%20%20%7D%0A%7D%0A.laser%20%7B%0A%20%20animation%3A%20blink%20.5s%20infinite%3B%0A%20%20-webkit-animation%3A%20blink%20.5s%20infinite%3B%0A%20%20-moz-animation%3A%20blink%20.5s%20infinite%3B%0A%7D%0A.brain%20%7B%0A%20%20background%3A%20radial-gradient%28circle%2C%20white%2015%25%2C%20transparent%2040%25%29%2C%20%23cc5%3B%0A%20%20background%3A%20-moz-radial-gradient%28circle%2C%20white%2015%25%2C%20transparent%2040%25%29%2C%20%23cc5%3B%20%0A%20%20background%3A%20-webkit-radial-gradient%28circle%2C%20white%2015%25%2C%20transparent%2040%25%29%2C%20%23cc5%3B%0A%20%20background-size%3A%2075px%20150px%3B%0A%20%20height%3A%20150px%3B%0A%20%20width%3A%20150px%3B%0A%20%20border-radius%3A%2060px%2060px%2010px%2010px%3B%0A%20%20border-bottom%3A%2040px%20solid%20%23666%3B%0A%20%20position%3A%20relative%3B%0A%20%20left%3A%2070px%3B%0A%7D%0A.torso%20%7B%0A%20%20height%3A%200%3B%0A%20%20width%3A%20140px%3B%0A%20%20border-top%3A%20300px%20solid%20%23bc6%3B%0A%20%20border-left%3A%2075px%20solid%20transparent%3B%0A%20%20border-right%3A%2075px%20solid%20transparent%3B%0A%20%20border-radius%3A%2020px%2020px%20100px%20100px%3B%0A%7D%0A.left%20%7B%0A%20%20font-family%3A%20%27Poller%20One%27%2C%20verdana%2C%20arial%2C%20sans-serif%3B%0A%20%20font-weight%3A%20bold%3B%0A%20%20font-size%3A%20250px%3B%0A%20%20color%3A%20%23666%3B%0A%20%20transform%3A%20rotate%28200deg%29%3B%0A%20%20-webkit-transform%3A%20rotate%28200deg%29%3B%0A%20%20-moz-transform%3A%20rotate%28200deg%29%3B%0A%20%20position%3A%20relative%3B%0A%20%20top%3A%20-320px%3B%0A%20%20left%3A%20-190px%3B%0A%20%20z-index%3A%20-1%3B%0A%7D%0A.right%20%7B%0A%20%20font-family%3A%20%27Poller%20One%27%2C%20verdana%2C%20arial%2C%20sans-serif%3B%0A%20%20font-weight%3A%20bold%3B%0A%20%20font-size%3A%20250px%3B%0A%20%20color%3A%20%23666%3B%0A%20%20transform%3A%20scaleY%28-1%29%20rotate%2820deg%29%3B%0A%20%20-webkit-transform%3A%20scaleY%28-1%29%20rotate%2820deg%29%3B%0A%20%20-moz-transform%3A%20scaleY%28-1%29%20rotate%2820deg%29%3B%0A%20%20position%3A%20relative%3B%0A%20%20top%3A%20-620px%3B%0A%20%20left%3A%20190px%3B%0A%20%20z-index%3A%20-1%3B%0A%7D%0A.foot%20%7B%0A%20%20height%3A%2040px%3B%0A%20%20width%3A%2040px%3B%0A%20%20background%3A%20%23ccc%3B%0A%20%20border-radius%3A%2040px%3B%0A%20%20border%3A%2015px%20solid%20%23999%3B%0A%20%20position%3A%20relative%3B%0A%20%20left%3A%20110px%3B%0A%20%20top%3A%20-10px%3B%0A%20%20z-index%3A%20-1%3B%0A%7D%0A%0A@keyframes%20dance%20%7B%0A%20%20from%20%7B%0A%20%20%20%20left%3A%20800px%3B%20%20%0A%20%20%7D%20%20%0A%7D%0A@-webkit-keyframes%20dance%20%7B%0A%20%20from%20%7B%0A%20%20%20%20left%3A%20800px%3B%20%20%0A%20%20%7D%20%20%0A%7D%0A@-moz-keyframes%20dance%20%7B%0A%20%20from%20%7B%0A%20%20%20%20left%3A%20800px%3B%20%20%0A%20%20%7D%20%20%0A%7D%0A%0Aimg%20%7B%0A%20%20animation%3A%20dance%204s%20infinite%3B%0A%20%20-webkit-animation%3A%20dance%204s%20infinite%3B%0A%20%20-moz-animation%3A%20dance%204s%20infinite%3B%0A%20%20position%3A%20absolute%3B%0A%20%20top%3A%20200px%3B%0A%20%20left%3A%20400px%3B%0A%7D%0A%3C/style%3E%0A%3C/head%3E%0A%0A%3Cbody%3E%0A%0A%3Cdiv%20class%3D%22robot%22%3E%0A%20%20%3Cdiv%20class%3D%22beep%22%3E%3C/div%3E%0A%20%20%3Cdiv%20class%3D%22brain%22%3E%3C/div%3E%0A%20%20%3Cdiv%20class%3D%22torso%22%3E%0A%20%20%20%20%3Cdiv%20class%3D%22left%22%3Ej%3C/div%3E%0A%20%20%20%20%3Cdiv%20class%3D%22right%22%3Ej%3C/div%3E%0A%20%20%3C/div%3E%0A%20%20%3Cdiv%20class%3D%22foot%22%3E%3C/div%3E%0A%3C/div%3E%0A%0A%3Cbutton%20class%3D%22flash%22%3Elaser%20eyes%20on/off%3C/button%3E%0A%3Cbutton%20class%3D%22color%22%3Echange%20color%21%3C/button%3E%0A%3Cbutton%20class%3D%22moves%22%3Ebreak/dance%3C/button%3E%0A%0A%3Cimg%20src%3D%22/assets/dance_cotter.gif%22%3E%0A%0A%3Cscript%3E%0A//%20When%20eyes%20button%20is%20clicked%2C%20toggle%20laser%20class%20on%20brain%0A%24%28%22.flash%22%29.click%28function%28%29%20%7B%0A%20%20%24%28%22.brain%22%29.toggleClass%28%27laser%27%29%3B%0A%7D%29%3B%0A%0A//%20When%20color%20button%20is%20clicked...%0A%24%28%22.color%22%29.click%28function%28%29%20%7B%0A%20%20//%20assign%20each%20named%20color%20a%20random%20number%200-255%0A%20%20var%20red%20%3D%20Math.floor%28Math.random%28%29%20*%20255%29%3B%0A%20%20var%20green%20%3D%20Math.floor%28Math.random%28%29%20*%20255%29%3B%0A%20%20var%20blue%20%3D%20Math.floor%28Math.random%28%29%20*%20255%29%3B%0A%0A//%20Generate%20on%20RGBA%20value%20from%20red%2C%20green%2C%20and%20blue%0A%20%20var%20randomRGBA%20%3D%20%27rgba%28%27+red+%27%2C%27+green+%27%2C%27+blue+%27%2C1%29%27%3B%0A%0A//%20and%20change%20the%20body%27s%20background%20to%20our%20random%20color%0A%20%20%24%28%22body%22%29.css%28%22background%22%2C%20randomRGBA%29%3B%0A%20%20//Display%20the%20three%20values%20in%20an%20alert%20window%0A%20%20//alert%28randomRGBA%29%3B%0A%7D%29%3B%0A%20%20%0A//%20toggle%20the%20dance%20moves%20of%20Cotter%0A%20%20%24%28%22.moves%22%29.click%28function%28%29%20%7B%0A%20%20%20%24%28%22img%22%29.toggle%28%29%3B%20%0A%20%20%7D%29%3B%0A%20%20%0A%3C/script%3E%0A%3C/body%3E","currentUserUsername":"traceylea9","currentUserPicture":"https://secure.gravatar.com/avatar/7e5cb6169b0d8870d1bdefa5459669ee.png?r=PG","admin":false};
+</script>
+</div><!-- #show-project -->
+
+
+  <script type="text/javascript">
+  var analytics=analytics||[];(function(){var e=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group","on","once","off"],t=function(e){return function(){analytics.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var n=0;n<e.length;n++)analytics[e[n]]=t(e[n])})(),analytics.load=function(e){var t=document.createElement("script");t.type="text/javascript",t.async=!0,t.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+e+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(t,n)};
+
+  analytics.load('ggdhx4ykai');
+
+
+      var user_attributes = {
+        name: 'Tracey HIll',
+        email: 'traceylea9@gmail.com',
+        current_project: '22',
+        username: 'traceylea9',
+        current_sign_in_ip: '118.209.126.18',
+        created_at: '2020-04-29T10:08:37'
+      }
+
+        analytics.identify('726454', user_attributes);
+
+
+</script>
+
+  <script src="//ga-dash.s3.amazonaws.com/production/assets/application-f129815f72abdf43cb47c21e892126ea9b835c66241715578979150aa49fbc72.js"></script>
+  
+  <img src="//traffic.outbrain.com/network/trackpxl?advid=8982&action=view" height="1" width="1" border="0" alt="" />
+  <!-- Facebook Pixel Code -->
+  <script>
+  !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+  n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+  document,'script','//connect.facebook.net/en_US/fbevents.js');
+
+  fbq('init', '1467656470148115');
+  fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=1467656470148115&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- End Facebook Pixel Code -->
 </body>
+</html>
